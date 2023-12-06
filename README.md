@@ -1,0 +1,2 @@
+# Lokaverkefni-cpp
+Lokaverkefni
