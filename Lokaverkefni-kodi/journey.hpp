@@ -13,7 +13,8 @@ private:
     int Heildarfjöldi;
 public:
     Journey();
-    Journey(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi);    
+    Journey(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi);
+    
     int getID();
     void setID(int Nr);
     int getFjöldi_bókaðir();

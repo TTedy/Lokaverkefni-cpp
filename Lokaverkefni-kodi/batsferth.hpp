@@ -10,11 +10,14 @@
 class batsferth : public Journey
 {
 private:
+    int Nr;
+    int Fjöldi_bókaðir;
+    int Heildarfjöldi;
     bool yfirbiggdur;
 public:
     batsferth();
     batsferth(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi, bool yfirbiggdur); // Define a new constructor
     bool getyfirbiggdur();
     void setyfirbiggdur(bool yfirbiggdur);
-    virtual ~batsferth();
+    virtual ~batsferth() {}
 };

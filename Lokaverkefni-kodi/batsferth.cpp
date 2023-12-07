@@ -1,9 +1,11 @@
 // batsferth.cpp
 
-#include "batsferth.hpp"
+
 
 #include <iostream>
 #include <string>
+
+#include "batsferth.hpp"
 
     batsferth::batsferth(){
         this->yfirbiggdur = false;

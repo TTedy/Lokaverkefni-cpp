@@ -1,9 +1,11 @@
 // flugfert.cpp
 
-#include "flugfert.hpp"
+
 
 #include <iostream>
 #include <string>
+
+#include "flugfert.hpp"
 
     flugfert::flugfert(){
         this->stadsetning = "Reykjavík";    
