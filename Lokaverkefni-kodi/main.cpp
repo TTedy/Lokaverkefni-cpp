@@ -3,4 +3,6 @@
 #include <iostream>
 #include <string>
 
-#include "journey.h"
+#include "journey.hpp"
+#include "hjolaferth.hpp"
+#include "flugfert.hpp"
