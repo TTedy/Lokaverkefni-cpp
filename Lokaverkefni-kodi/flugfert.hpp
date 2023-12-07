@@ -7,14 +7,15 @@
 
 #include "journey.hpp"
 
-class Flugfert : public Journey{
-    private:
-        std::string stadsetning;
-    public:
-        Flugfert();
-        Flugfert(std::string stadsetning);
-        std::string getstadsetning();
-        void setstadsetning(std::string stadsetning);
-        virtual ~Flugfert();
-        
+class flugfert : public Journey
+{
+private:
+    std::string stadsetning; 
+
+public:
+    flugfert();
+    flugfert(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi, const std::string& setstadsetning);
+    std::string getstadsetning(); 
+    void setstadsetning(const std::string& setstadsetning); 
+    virtual ~flugfert();
 };

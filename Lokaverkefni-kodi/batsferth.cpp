@@ -9,7 +9,7 @@
         this->yfirbiggdur = false;
     }
 
-    batsferth::batsferth(bool yfirbiggdur){
+    batsferth::batsferth(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi, bool yfirbiggdur){
         this->yfirbiggdur = yfirbiggdur;
     }
 

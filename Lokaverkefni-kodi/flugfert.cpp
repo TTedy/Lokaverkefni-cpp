@@ -5,12 +5,18 @@
 #include <iostream>
 #include <string>
 
+    flugfert::flugfert(){
+        this->stadsetning = "Reykjavík";    
+    }
 
-std::string Flugfert::getstadsetning(){
-    stadsetning = "Reykjavík";
-    return stadsetning;
-}
+    flugfert::flugfert(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi, const std::string& setstadsetning){
+        this->stadsetning = setstadsetning;
+    }
 
-void Flugfert::setstadsetning(std::string stadsetning){
-    this->stadsetning = stadsetning;
-}
+    std::string flugfert::getstadsetning(){
+        return stadsetning;
+    }
+
+    void flugfert::setstadsetning(const std::string& setstadsetning){
+        this->stadsetning = setstadsetning;
+    }

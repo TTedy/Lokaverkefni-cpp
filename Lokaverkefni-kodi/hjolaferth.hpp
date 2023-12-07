@@ -1,4 +1,4 @@
-// Hjolaferth.hpp
+// hjolaferth.hpp
 
 #pragma once
 
@@ -13,10 +13,8 @@ private:
     int timi;
 public:
     hjolaferth();
-    hjolaferth(int timi);
+    hjolaferth(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi, int timi); // Define a new constructor
     int gettimi();
     void settimi(int timi);
     virtual ~hjolaferth();
 };
-
-
