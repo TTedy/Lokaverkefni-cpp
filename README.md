@@ -21,5 +21,5 @@ timi (int status)
 
 bats
 Yfirbyggið (bool status)
-
+(komu fram vandmál þegar var reynt að git commit-a)
 
