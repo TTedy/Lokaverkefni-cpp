@@ -10,8 +10,10 @@ hjolaferth::hjolaferth(){
 }
 
 hjolaferth::hjolaferth(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi, int timi){
-    // You need to set Nr, Fjöldi_bókaðir, and Heildarfjöldi here as well
     this->timi = timi;
+    this->setID(Nr);
+    this->setFjöldi_bókaðir(Fjöldi_bókaðir);
+    this->setHeildarfjöldi(Heildarfjöldi);
 }
 
 int hjolaferth::gettimi(){

@@ -1,5 +1,3 @@
-// journey.h
-
 #pragma once
 
 #include <string>
@@ -7,14 +5,13 @@
 
 class Journey {
 private:
-    //std::string name;
     int Nr;
     int Fjöldi_bókaðir;
     int Heildarfjöldi;
+
 public:
-    Journey();
     Journey(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi);
-    
+
     int getID();
     void setID(int Nr);
     int getFjöldi_bókaðir();
