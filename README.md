@@ -23,3 +23,7 @@ bats
 Yfirbyggið (bool status)
 (komu fram vandmál þegar var reynt að git commit-a)
 
+# halt hefur verið áfram með verkefnið þar sem klassanir voru kláraðir á samt byrjað var að gera linked list klassa. 8.12.2023
+
+halt hefur verið afram með verkefnið allir klassar fyrir skill á föstudaginn er komið og byrjað að skapa linkedlist klassana sem þarf seinna í verkefninu.
+

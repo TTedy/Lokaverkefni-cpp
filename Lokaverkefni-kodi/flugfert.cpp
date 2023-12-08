@@ -13,6 +13,9 @@
 
     flugfert::flugfert(int, int, int, const std::string& setstadsetning){
         this->stadsetning = setstadsetning;
+        this->setID(Nr);
+        this->setFjöldi_bókaðir(Fjöldi_bókaðir);
+        this->setHeildarfjöldi(Heildarfjöldi);
     }
     std::string flugfert::getstadsetning(){
         return stadsetning;

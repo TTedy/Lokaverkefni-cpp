@@ -1,5 +1,3 @@
-// journey.h
-
 #pragma once
 
 #include <string>

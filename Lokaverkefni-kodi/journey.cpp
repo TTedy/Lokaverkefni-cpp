@@ -20,27 +20,36 @@
     void Journey::setID(int nr){
         this->nr = nr;
     }
-    int Journey::getfjoldibokathir(){
-        return this->fjoldibokathir;
-    }
+<<<<<<< HEAD
+    int Journey::getFjöldi_bókaðir(){
+        return Fjöldi_bókaðir;
+=======
     bool Journey::setfjoldibokathir(int fjoldibokathir){
         if (fjoldibokathir > getheildarfjoldi()){
-            //std::cout << "Það eru ekki nógu mörg sæti laus" << std::endl;
             return false;
         } else {
             this->fjoldibokathir = fjoldibokathir;
             return true;
         }
     }
+<<<<<<< HEAD
+    int Journey::getHeildarfjöldi(){
+        return Heildarfjöldi;
+=======
 
     int Journey::getheildarfjoldi(){
         return this->heildarfjoldi;
+>>>>>>> dad7c05d1d044c3fc0668a8971258358df5ea7d2
     }
     void Journey::setheildarfjoldi(int heildarfjoldi){
         this->heildarfjoldi = heildarfjoldi;
     }
+<<<<<<< HEAD
+
+=======
     void Journey::prenta(){
         std::cout << "ID: " << getID() << std::endl;
         std::cout << "Fjöldi bókaðra þátta: " << getfjoldibokathir() << std::endl;
         std::cout << "Heildarfjöldi þátta: " << getheildarfjoldi() << std::endl;
     }
+>>>>>>> dad7c05d1d044c3fc0668a8971258358df5ea7d2
