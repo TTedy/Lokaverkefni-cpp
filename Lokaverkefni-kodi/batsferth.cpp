@@ -11,7 +11,7 @@
         this->yfirbiggdur = false;
     }
 
-    batsferth::batsferth(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi, bool yfirbiggdur){
+    batsferth::batsferth(int, int, int, bool yfirbiggdur){
         this->yfirbiggdur = yfirbiggdur;
     }
 
@@ -20,4 +20,9 @@
     }
     void batsferth::setyfirbiggdur(bool yfirbiggdur){
         this->yfirbiggdur = yfirbiggdur;
+    }
+
+    void batsferth::prenta(){
+        Journey::prenta();
+        std::cout << "Bátsferð: " << (this->yfirbiggdur ? "Já" : "Nei") << std::endl;
     }

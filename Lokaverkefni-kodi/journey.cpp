@@ -2,30 +2,45 @@
 
 #include "journey.hpp"
 
-    Journey::Journey(){
-        this->Nr = Nr;
-        this->Fjöldi_bókaðir = Fjöldi_bókaðir;
-        this->Heildarfjöldi = Heildarfjöldi;
+    Journey::Journey() {
+        this->nr = 0;
+        this->fjoldibokathir = 0;
+        this->heildarfjoldi = 0;
     }
+
+    Journey::Journey(int nr, int fjoldibokathir, int heildarfjoldi){
+        this->nr = nr;
+        this->fjoldibokathir = fjoldibokathir;
+        this->heildarfjoldi = heildarfjoldi;
+    }
+    
     int Journey::getID(){
-        this->Nr = Nr;
+        return this->nr;
     }
-    void Journey::setID(int Nr){
-        this->Nr = Nr;
+    void Journey::setID(int nr){
+        this->nr = nr;
     }
-    int Journey::getFjöldi_bókaðir(){
-        this->Fjöldi_bókaðir = Fjöldi_bókaðir;
+    int Journey::getfjoldibokathir(){
+        return this->fjoldibokathir;
     }
-    void Journey::setFjöldi_bókaðir(int Fjöldi_bókaðir){
-        if (Fjöldi_bókaðir > getHeildarfjöldi()){
-            std::cout << "Það eru ekki nógu mörg sæti laus" << std::endl;
+    bool Journey::setfjoldibokathir(int fjoldibokathir){
+        if (fjoldibokathir > getheildarfjoldi()){
+            //std::cout << "Það eru ekki nógu mörg sæti laus" << std::endl;
+            return false;
         } else {
-            this->Fjöldi_bókaðir = Fjöldi_bókaðir;
+            this->fjoldibokathir = fjoldibokathir;
+            return true;
         }
     }
-    int Journey::getHeildarfjöldi(){
-        this->Heildarfjöldi = Heildarfjöldi;
+
+    int Journey::getheildarfjoldi(){
+        return this->heildarfjoldi;
     }
-    void Journey::setHeildarfjöldi(int Heildarfjöldi){
-        this->Heildarfjöldi = Heildarfjöldi;
+    void Journey::setheildarfjoldi(int heildarfjoldi){
+        this->heildarfjoldi = heildarfjoldi;
+    }
+    void Journey::prenta(){
+        std::cout << "ID: " << getID() << std::endl;
+        std::cout << "Fjöldi bókaðra þátta: " << getfjoldibokathir() << std::endl;
+        std::cout << "Heildarfjöldi þátta: " << getheildarfjoldi() << std::endl;
     }

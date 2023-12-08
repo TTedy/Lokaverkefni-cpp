@@ -11,10 +11,9 @@
         this->stadsetning = "Reykjavík";    
     }
 
-    flugfert::flugfert(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi, const std::string& setstadsetning){
+    flugfert::flugfert(int, int, int, const std::string& setstadsetning){
         this->stadsetning = setstadsetning;
     }
-
     std::string flugfert::getstadsetning(){
         return stadsetning;
     }

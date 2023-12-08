@@ -14,8 +14,7 @@ private:
 
 public:
     flugfert();
-    flugfert(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi, const std::string& setstadsetning);
+    flugfert(int nr, int fjoldibokathir, int heildarfjoldi, const std::string& setstadsetning);
     std::string getstadsetning(); 
     void setstadsetning(const std::string& setstadsetning); 
-    virtual ~flugfert();
 };

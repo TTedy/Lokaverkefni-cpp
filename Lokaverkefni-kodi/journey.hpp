@@ -8,17 +8,18 @@
 class Journey {
 private:
     //std::string name;
-    int Nr;
-    int Fjöldi_bókaðir;
-    int Heildarfjöldi;
+    int nr;
+    int fjoldibokathir;
+    int heildarfjoldi;
 public:
     Journey();
-    Journey(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi);
+    Journey(int nr, int fjoldibokathir, int heildarfjoldi);
     
     int getID();
-    void setID(int Nr);
-    int getFjöldi_bókaðir();
-    void setFjöldi_bókaðir(int Fjöldi_bókaðir);
-    int getHeildarfjöldi();
-    void setHeildarfjöldi(int Heildarfjöldi);
+    void setID(int nr);
+    int getfjoldibokathir();
+    bool setfjoldibokathir(int fjoldibokathir);
+    int getheildarfjoldi();
+    void setheildarfjoldi(int heildarfjoldi);
+    void prenta();
 };
