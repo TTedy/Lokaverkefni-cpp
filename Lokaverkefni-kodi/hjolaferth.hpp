@@ -13,8 +13,8 @@ private:
     int timi;
 public:
     hjolaferth();
-    hjolaferth(int Nr, int Fjöldi_bókaðir, int Heildarfjöldi, int timi); // Define a new constructor
+    hjolaferth(int nr, int fjoldibokathir, int heildarfjoldi, int timi); // Define a new constructor
     int gettimi();
     void settimi(int timi);
-    virtual ~hjolaferth();
+    void prenta();
 };
