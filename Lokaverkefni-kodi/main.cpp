@@ -1,33 +1,41 @@
-// main.cpp
-
-#include <iostream>
-#include <string>
+#include "batsferth.hpp"
+#include "flugfert.hpp"
+#include "hjolaferth.hpp"
 
 using namespace std;
 
-// Inntök ákveðinna heimilisvistargerða
-#include "journey.hpp"
-#include "hjolaferth.hpp"
-#include "flugfert.hpp"
-#include "batsferth.hpp"
-
 int main() {
-    // Búa til tilvik af mismunandi ferðagerðum
-    batsferth batsferth1(201, 2, 10, false);
+    // Búa til tilvik af Bátsferð
+    batsferth batsferth1(201, 2, 10, false); 
     batsferth batsferth2(202, 20, 100, true);
-    batsferth batsferth3(203, 6, 8, false);
+    batsferth batsferth3(203, 6, 8, false); 
+
+    // Búa til tilvik af Flugferð
     flugfert flugfert1(204, 10, 50, "Akureyri");
     flugfert flugfert2(205, 120, 200, "Tenerife");
-    flugfert flugfert3(206, 3, 10, "Grímsey");
-    flugfert flugfert4(207, 50, 250, "Boston");
-    hjolaferth hjolaferth1(208, 3, 10, 4);
-    hjolaferth hjolaferth2(209, 0, 20, 10);
-    hjolaferth hjolaferth3(210, 3, 5, 1);
+    flugfert flugfert3(206, 3, 10, "Grímsey"); 
+    flugfert flugfert4(207, 50, 250, "Boston"); 
 
-    // Printa út upplýsingar um nokkrar tiltekna tilvik
-    flugfert1.prenta(); // Print flight information fyrir Akureyri
-    batsferth1.prenta(); // Print information um batsferth1
-    hjolaferth1.prenta(); // Print information um hjolaferth1
+    // Búa til tilvik af Hjólaferð
+    hjolaferth hjolaferth1(208, 3, 10, 4); 
+    hjolaferth hjolaferth2(209, 0, 20, 10); 
+    hjolaferth hjolaferth3(210, 3, 5, 1); 
+
+    // Nota prenta() aðferðina til að prenta út upplýsingar um tilvikin
+    batsferth1.prenta();
+    batsferth2.prenta();
+    batsferth3.prenta();
+
+    flugfert1.prenta();
+    flugfert2.prenta();
+    flugfert3.prenta();
+    flugfert4.prenta();
+
+    hjolaferth1.prenta();
+    hjolaferth2.prenta();
+    hjolaferth3.prenta();
+
+    // er að fá skritna compiler villu hérna, en þetta á að virkar samt þvi það er "linker error" (hvað sem það þýðir :D)
 
     return 0;
 }

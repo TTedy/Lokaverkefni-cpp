@@ -1,7 +1,10 @@
 // Journey.cpp
 
-#include "journey.hpp"
+#include <iostream>
+#include <string>
 
+#include "journey.hpp"
+using namespace std;
 
 // Tómi smiður fyrir Journey hlutinn.
 Journey::Journey(){
@@ -31,6 +34,7 @@ int Journey::getfjoldibokathir(){
 bool Journey::setfjoldibokathir(int fjoldibokathir){
     if (fjoldibokathir <= getheildarfjoldi() && fjoldibokathir >= 0) {
         // Tryggðu að ekki sé hægt að skrá fleiri farþega í ferð en pláss er fyrir.
+        cout << "Þú getur ekki skráð fleiri farþega í ferðina en pláss er fyrir" << endl;
         return false;
     } else {
         this->fjoldibokathir = fjoldibokathir;
@@ -45,9 +49,11 @@ int Journey::getheildarfjoldi(){
 void Journey::setheildarfjoldi(int heildarfjoldi){
     this->heildarfjoldi = heildarfjoldi;
 }
-// Aðferð til að prenta út upplýsingar um ferðina.
-void Journey::prentaallt(){
+// Aðferð til að prenta út upplýsingar um ferðinar.
+void Journey::prentaallt() {
     std::cout << "Journey: " << this->nr << std::endl;
+    std::cout << "Number of Bookings: " << this->fjoldibokathir << std::endl;
+    std::cout << "Total Passengers: " << this->heildarfjoldi << std::endl;
 }
 
 
