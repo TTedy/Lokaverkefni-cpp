@@ -21,3 +21,6 @@
     void flugfert::setstadsetning(const std::string& setstadsetning){
         this->stadsetning = setstadsetning;
     }
+    void flugfert::prenta(){
+        std::cout << "Flugferð: " << this->stadsetning << std::endl;
+    }

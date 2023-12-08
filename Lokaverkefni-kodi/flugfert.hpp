@@ -17,4 +17,5 @@ public:
     flugfert(int nr, int fjoldibokathir, int heildarfjoldi, const std::string& setstadsetning);
     std::string getstadsetning(); 
     void setstadsetning(const std::string& setstadsetning); 
+    void prenta();
 };

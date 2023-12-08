@@ -6,7 +6,7 @@
 #include "hjolaferth.hpp"
 
 hjolaferth::hjolaferth(){
-    this->timi = 2;
+    this->timi = 0;
 }
 
 hjolaferth::hjolaferth(int, int, int, int timi){
@@ -19,4 +19,8 @@ int hjolaferth::gettimi(){
 
 void hjolaferth::settimi(int timi){
     this->timi = timi;
+}
+
+void hjolaferth::prenta(){
+    std::cout << "Hjólaferð: " << this->timi << std::endl;
 }

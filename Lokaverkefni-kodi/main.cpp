@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 #include "journey.hpp"
 #include "hjolaferth.hpp"
 #include "flugfert.hpp"
@@ -20,5 +22,6 @@ int main(){
     hjolaferth(209, 0, 20, 10);
     hjolaferth(210, 3, 5, 1);
 
+    
     return 0;
 }
