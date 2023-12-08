@@ -7,22 +7,14 @@
 
 #include "journey.hpp"
 
+// Klasinn hjolaferth erfir frá Journey og bætir við upplýsingum um tíma hjólaförarinnar.
 class batsferth : public Journey{
-private:
-    int nr;
-    int fjoldibokathir;
-    int heildarfjoldi;    
-    bool yfirbiggdur;
+private:   
+    bool yfirbiggdur; // ef bátsferðin er yfirbyggð já eða nei
 public:
-    batsferth();
-    batsferth(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur); // Define a new constructor
-    int getID();
-    void setID(int nr);
-    int getfjoldibokathir();
-    void setfjoldibokathir(int fjoldibokathir);
-    int getheildarfjoldi();
-    void setheildarfjoldi(int heildarfjoldi);
-    bool getyfirbiggdur();
-    void setyfirbiggdur(bool yfirbiggdur);
-    void prenta();
+    batsferth(); // Tómi smiður fyrir batsferth hlutinn.
+    batsferth(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur); // Smiður sem mótar batsferth hlut með tilgreindum upplýsingum og kallar á Journey smiðinn.
+    bool getyfirbiggdur(); // Aðferð til að ná í upplýsingar um hvort ferja sé yfirbyggð eða ekki.
+    void setyfirbiggdur(bool yfirbiggdur); // Aðferð til að setja upplýsingar um hvort ferja sé yfirbyggð eða ekki.
+    void prenta(); // Aðferð til að prenta út upplýsingar um ferjuna.
 };

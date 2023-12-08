@@ -5,43 +5,23 @@
 
 #include "flugfert.hpp"
 
+    // Tómi smiður fyrir hjolaferth hlutinn.
     flugfert::flugfert(){
-        this->nr = 0; 
-        this->fjoldibokathir = 0; 
-        this->heildarfjoldi = 0; 
-        this->stadsetning = "";      
+        this->stadsetning = "";
     }
-    flugfert::flugfert(int nr, int fjoldibokathir, int heildarfjoldi, const std::string& setstadsetning){
-        this->setID(nr);
-        this->setfjoldibokathir(fjoldibokathir);
-        this->setheildarfjoldi(heildarfjoldi);
-        this->stadsetning = stadsetning;
+    // Smiður sem mótar flugfert hlut með tilgreindum upplýsingum og kallar á Journey smiðinn.
+    flugfert::flugfert(int nr, int fjoldibokathir, int heildarfjoldi, const std::string& setstadsetning) : Journey(nr, fjoldibokathir, heildarfjoldi){
+        this->stadsetning = setstadsetning;
     }
-
-    int flugfert::getID(){
-        return this->nr;
+    // Aðferð til að ná í núverandi staðsetningu flugferju.
+    std::string flugfert::getstadsetning(){
+        return this->stadsetning;
     }
-    void flugfert::setID(int nr){
-        this->nr = nr;
+    // Aðferð til að setja nýja staðsetningu flugferju.
+    void flugfert::setstadsetning(std::string setstadsetning){
+        this->stadsetning = setstadsetning;
     }
-    int flugfert::getfjoldibokathir(){
-        return this->fjoldibokathir;
-    }
-    void flugfert::setfjoldibokathir(int fjoldibokathir){
-        this->fjoldibokathir = fjoldibokathir;
-    }
-    int flugfert::getheildarfjoldi(){
-        return this->heildarfjoldi;
-    }
-    void flugfert::setheildarfjoldi(int heildarfjoldi){
-        this->heildarfjoldi = heildarfjoldi;
-    }
-    std::string flugfert::getstadsetning() {
-        return stadsetning;
-    }
-    void flugfert::setheildarfjoldi(int heildarfjoldi){
-        this->heildarfjoldi = heildarfjoldi;
-    }
+    // Aðferð til að prenta út upplýsingar um flugferjuna.
     void flugfert::prenta(){
         std::cout << "Flugferð: " << this->stadsetning << std::endl;
     }

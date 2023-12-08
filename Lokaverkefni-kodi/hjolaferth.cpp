@@ -5,42 +5,23 @@
 
 #include "hjolaferth.hpp"
 
+// Tómi smiður fyrir hjolaferth hlutinn.
     hjolaferth::hjolaferth(){
         this->timi = 0;
-        this->nr = 0; 
-        this->fjoldibokathir = 0; 
-        this->heildarfjoldi = 0;        
     }
-    hjolaferth::hjolaferth(int nr, int fjoldibokathir, int heildarfjoldi, int timi){
-        this->setID(nr);
-        this->setfjoldibokathir(fjoldibokathir);
-        this->setheildarfjoldi(heildarfjoldi);
+    // Smiður sem mótar hjolaferth hlut með tilgreindum upplýsingum og kallar á Journey smiðinn.
+    hjolaferth::hjolaferth(int nr, int fjoldibokathir, int heildarfjoldi, int timi) : Journey(nr, fjoldibokathir, heildarfjoldi){
         this->timi = timi;
     }
-    int hjolaferth::getID(){
-        return this->nr;
-    }
-    void hjolaferth::setID(int nr){
-        this->nr = nr;
-    }
-    int hjolaferth::getfjoldibokathir(){
-        return this->fjoldibokathir;
-    }
-    void hjolaferth::setfjoldibokathir(int fjoldibokathir){
-        this->fjoldibokathir = fjoldibokathir;
-    }
-    int hjolaferth::getheildarfjoldi(){
-        return this->heildarfjoldi;
-    }
-    void hjolaferth::setheildarfjoldi(int heildarfjoldi){
-        this->heildarfjoldi = heildarfjoldi;
-    }
+    // Aðferð til að ná í fjölda klukkustunda sem hjólaförin er varandi.
     int hjolaferth::gettimi(){
         return this->timi;
     }
+    // Aðferð til að setja fjölda klukkustunda sem hjólaförin er varandi.
     void hjolaferth::settimi(int timi){
         this->timi = timi;
-    }   
+    }
+    // Aðferð til að prenta út upplýsingar um hjólaförina.
     void hjolaferth::prenta(){
-        std::cout << "Hjólaferð: " << this->timi << " mínútur" << std::endl;
+        std::cout << "Hjólaferð: " << this->timi << std::endl;
     }

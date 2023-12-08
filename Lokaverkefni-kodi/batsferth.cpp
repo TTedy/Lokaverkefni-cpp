@@ -1,46 +1,27 @@
 // batsferth.cpp
 
-#include <iostream>
-#include <string>
-
 #include "batsferth.hpp"
 
+    // Tómi smiður fyrir hjolaferth hlutinn.
     batsferth::batsferth(){
-        this->nr = 0; 
-        this->fjoldibokathir = 0; 
-        this->heildarfjoldi = 0; 
         this->yfirbiggdur = false;       
     }
-    batsferth::batsferth(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur){
-        this->setID(nr);
-        this->setfjoldibokathir(fjoldibokathir);
-        this->setheildarfjoldi(heildarfjoldi);
+    // Smiður sem mótar flugfert hlut með tilgreindum upplýsingum og kallar á Journey smiðinn.
+    batsferth::batsferth(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur) : Journey(nr,fjoldibokathir, heildarfjoldi){
         this->yfirbiggdur = yfirbiggdur;
     } 
-    int batsferth::getID(){
-        return this->nr;
-    }
-    void batsferth::setID(int nr){
-        this->nr = nr;
-    }
-    int batsferth::getfjoldibokathir(){
-        return this->fjoldibokathir;
-    }
-    void batsferth::setfjoldibokathir(int fjoldibokathir){
-        this->fjoldibokathir = fjoldibokathir;
-    }
-    int batsferth::getheildarfjoldi(){
-        return this->heildarfjoldi;
-    }
-    void batsferth::setheildarfjoldi(int heildarfjoldi){
-        this->heildarfjoldi = heildarfjoldi;
-    }
+
+    // Aðferð til að ná í upplýsingar um hvort ferja sé yfirbyggð eða ekki.
     bool batsferth::getyfirbiggdur(){
         return this->yfirbiggdur;
     }
+
+    // Aðferð til að setja upplýsingar um hvort ferja sé yfirbyggð eða ekki.
     void batsferth::setyfirbiggdur(bool yfirbiggdur){
         this->yfirbiggdur = yfirbiggdur;
     }
+
+    // Aðferð til að prenta út upplýsingar um ferjuna.
     void batsferth::prenta(){
-        std::cout << "Bátsferð: " << this->yfirbiggdur << std::endl;
+        std::cout << "er laust pláss í Bátsferðinni : " << (this->yfirbiggdur ? "Nei" : "Já") << std::endl;
     }
