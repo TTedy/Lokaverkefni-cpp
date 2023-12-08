@@ -14,7 +14,7 @@ private:
 public:
     Journey();
     Journey(int nr, int fjoldibokathir, int heildarfjoldi);
-    
+    // vil senda aftur í github 
     int getID();
     void setID(int nr);
     int getfjoldibokathir();
