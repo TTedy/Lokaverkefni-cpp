@@ -3,9 +3,10 @@
 #include "journey.hpp"
 
     Journey::Journey(){
-        this->nr = 0;
-        this->fjoldibokathir = 0;
-        this->heildarfjoldi = 0;
+        int nr = 0;
+        int fjoldibokathir = 0;
+        int heildarfjoldi = 0;
+        int hofundarfjoldi = 0;
     }
     Journey::Journey(int nr, int fjoldibokathir, int heildarfjoldi){
         this->setID(nr);
@@ -33,14 +34,16 @@
         std::cout << "ID: " << this->nr << std::endl;
         std::cout << "Fjöldi bókaða þátttakenda: " << this->fjoldibokathir << std::endl;
         std::cout << "Heildarfjöldi þátttakenda: " << this->getheildarfjoldi() << std::endl;
-    }// þarf static til að geta notað þetta í main, þvi það er ekki til instance af þessu
+    }
 
     bool Journey::setfjoldibokathir(int fjoldibokathir) {
-        if (fjoldibokathir <= getheildarfjoldi() || fjoldibokathir < 0) {
+        if (fjoldibokathir <= getheildarfjoldi() && fjoldibokathir >= 0) {
+            // Tryggðu að ekki sé hægt að skrá fleiri farþega í ferð en pláss er fyrir.
             return false;
         } else {
             this->fjoldibokathir = fjoldibokathir;
             return true;
         }
     }
+
 

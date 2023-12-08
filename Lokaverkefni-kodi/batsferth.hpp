@@ -9,10 +9,10 @@
 
 class batsferth : public Journey{
 private:
-    bool yfirbiggdur;
     int nr;
     int fjoldibokathir;
-    int heildarfjoldi;
+    int heildarfjoldi;    
+    bool yfirbiggdur;
 public:
     batsferth();
     batsferth(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur); // Define a new constructor

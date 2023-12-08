@@ -1,7 +1,5 @@
 // batsferth.cpp
 
-
-
 #include <iostream>
 #include <string>
 
