@@ -15,7 +15,6 @@ private:
 public:
     Journey();
     Journey(int nr, int fjoldibokathir, int heildarfjoldi);
-
     int getID();
     void setID(int nr);
     int getfjoldibokathir();
