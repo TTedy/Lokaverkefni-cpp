@@ -27,6 +27,6 @@ klárað var verkefnið alveg til fimmta lið þar sem ég skildi ekki alveg ver
 logic-inn sem sýktar út lið 3 er bara að leita eftir ef minna en getheildarfjoldi og ef minna en 0.
 
 vscode utaf einhverju vil ekki nota compilerinn í einhverskonar linker error er buin að reyna laga það í 3-4 klukkustundir allt frá þvi að git clona aftur á sama stað og að seta upp aftur wsl en ekkert gengur upp. 
-ég gefst bara upp út þvi klukkan er orðin half 12. Er farin að gráta í koddan. 
+ég gefst bara upp út þvi klukkan er orðin half 12. Er farin að gráta í koddann. 
 
 
