@@ -1,6 +1,7 @@
 #include "batsferth.hpp"
 #include "flugfert.hpp"
 #include "hjolaferth.hpp"
+#include "journey.hpp"
 
 using namespace std;
 
@@ -35,7 +36,9 @@ int main() {
     hjolaferth2.prenta();
     hjolaferth3.prenta();
 
-    // er að fá skritna compiler villu hérna, en þetta á að virkar samt þvi það er "linker error" (hvað sem það þýðir :D)
+    // Búa til tilvik af Journey og nota prentaallt() aðferðina til að prenta út upplýsingar um ferðina
+    Journey myJourney(1, 30, 100);
+    myJourney.prentaallt(); // hef einga hugmynd hvernig ég á gera þetta án þess að nota node klasa
 
     return 0;
 }
