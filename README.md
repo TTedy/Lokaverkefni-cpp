@@ -18,8 +18,6 @@ hjola { timi (int status) }
 
 bats {Yfirbyggið (bool status) (komu fram vandamál þegar var reynt að gilt commit-a)}
 
-
-
 það voru gerðar hpp og cpp skrár fyrir allt nema main.
 
 ## haldið hefur verið áfram með verkefnið þar sem klassarnir voru kláraðir á samt byrjað var að gera linked list klassa. 8.12.2023
@@ -27,4 +25,8 @@ bats {Yfirbyggið (bool status) (komu fram vandamál þegar var reynt að gilt c
 haldið hefur verið áfram með verkefnið allir klassar fyrir skill á föstudaginn er komið og byrjað að skapa linkedlist klassana sem þarf seinna í verkefninu.
 klárað var verkefnið alveg til fimmta lið þar sem ég skildi ekki alveg verkefna lýsinguna. byrjaði að fá einhverskonar villur þegar var reynt að compile-a en ég gatt ekki fundið neina syntax / stafsetningar villur ( örugglega logic villa)
 logic-inn sem sýktar út lið 3 er bara að leita eftir ef minna en getheildarfjoldi og ef minna en 0.
+
+vscode utaf einhverju vil ekki nota compilerinn í einhverskonar linker error er buin að reyna laga það í 3-4 klukkustundir allt frá þvi að git clona aftur á sama stað og að seta upp aftur wsl en ekkert gengur upp. 
+ég gefst bara upp út þvi klukkan er orðin half 12. Er farin að gráta í koddann. 
+
 
