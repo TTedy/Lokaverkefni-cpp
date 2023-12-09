@@ -21,4 +21,12 @@ class Journey {
         int getheildarfjoldi(); // Aðferð til að ná í heildarfjölda áttundaferðamanna í ferðinni.
         void setheildarfjoldi(int heildarfjoldi); // Aðferð til að setja heildarfjölda áttundaferðamanna í ferðinni.
         void prentaallt(); // Aðferð til að prenta út upplýsingar um hjólaförina.
+        /*
+        bool operator==(Journey& hitt);
+        bool operator!=(Journey& hitt);
+        bool operator<(Journey& hitt);
+        bool operator>(Journey& hitt);
+        bool operator<=(Journey& hitt);
+        bool operator>=(Journey& hitt);
+        */
 };

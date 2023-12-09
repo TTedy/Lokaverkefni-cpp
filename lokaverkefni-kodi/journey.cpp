@@ -57,3 +57,28 @@ void Journey::prentaallt() {
 }
 
 
+/*
+        bool Journey::operator==(Journey& hitt){
+            return this->fjoldibokathir == hitt.getfjoldibokathir() && this->heildarfjoldi == hitt.getheildarfjoldi();
+        }
+        bool Journey::operator!=(Journey& hitt){
+            return !(*this == hitt);
+        }
+        bool Journey::operator<(Journey& hitt){
+                if(this->getNafn() == hitt.getNafn()) {
+                return this->nr < hitt.getId();
+            } 
+            return this->nafn < hitt.getNafn();
+        }
+        bool Journey::operator>(Journey& hitt){
+
+        }
+        bool Journey::operator<=(Journey& hitt){
+
+        }
+        bool Journey::operator>=(Journey& hitt){
+
+        }
+*/
+
+

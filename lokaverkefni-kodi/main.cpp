@@ -40,5 +40,7 @@ int main() {
     Journey myJourney(1, 30, 100);
     myJourney.prentaallt(); // hef einga hugmynd hvernig ég á gera þetta án þess að nota node klasa
 
+    
+
     return 0;
 }
