@@ -21,7 +21,7 @@ class Journey {
         int getheildarfjoldi(); // Aðferð til að ná í heildarfjölda áttundaferðamanna í ferðinni.
         void setheildarfjoldi(int heildarfjoldi); // Aðferð til að setja heildarfjölda áttundaferðamanna í ferðinni.
         virtual void prentaallt();
-        virtual std::string getType();
+        std::string getType();
         bool operator==(Journey& hitt);
         bool operator!=(Journey& hitt);
         bool operator<(Journey& hitt);

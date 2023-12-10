@@ -17,5 +17,5 @@ class batsferth : public Journey{
         bool getyfirbiggdur(); // Aðferð til að ná í upplýsingar um hvort ferja sé yfirbyggð eða ekki.
         void setyfirbiggdur(bool yfirbiggdur); // Aðferð til að setja upplýsingar um hvort ferja sé yfirbyggð eða ekki.
         virtual void prenta(); // Aðferð til að prenta út upplýsingar um ferjuna.
-        virtual std::string getType();
+        std::string getType();
 };

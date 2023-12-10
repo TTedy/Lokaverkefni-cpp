@@ -17,5 +17,5 @@ class hjolaferth : public Journey{
         int gettimi(); // Aðferð til að ná í fjölda klukkustunda sem hjólaförin er varandi.
         void settimi(int timi);  // Aðferð til að setja fjölda klukkustunda sem hjólaförin er varandi.
         virtual void prenta(); // Aðferð til að prenta út upplýsingar um hjólaförina.
-        virtual std::string getType();
+        std::string getType();
 };

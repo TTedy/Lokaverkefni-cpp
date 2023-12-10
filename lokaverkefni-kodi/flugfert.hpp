@@ -17,5 +17,5 @@ class flugfert : public Journey{
         std::string getstadsetning(); // Aðferð til að ná í núverandi staðsetningu flugferju.
         void setstadsetning(std::string setstadsetning);  // Aðferð til að setja nýja staðsetningu flugferju.
         virtual void prenta();  // Aðferð til að prenta út upplýsingar um flugferjuna.
-        virtual std::string getType();
+        std::string getType();
 };  
