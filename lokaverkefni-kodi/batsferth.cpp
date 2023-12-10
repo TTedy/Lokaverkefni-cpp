@@ -25,3 +25,7 @@ void batsferth::setyfirbiggdur(bool yfirbiggdur){
 void batsferth::prenta(){
     std::cout << "er laust pláss í Bátsferðinni : " << (this->yfirbiggdur ? "Nei" : "Já") << std::endl;
 }
+
+std::string batsferth::getType(){
+    return "batsferth";
+}

@@ -49,36 +49,32 @@ int Journey::getheildarfjoldi(){
 void Journey::setheildarfjoldi(int heildarfjoldi){
     this->heildarfjoldi = heildarfjoldi;
 }
-// Aðferð til að prenta út upplýsingar um ferðinar.
-void Journey::prentaallt() {
-    std::cout << "Journey: " << this->nr << std::endl;
-    std::cout << "Number of Bookings: " << this->fjoldibokathir << std::endl;
-    std::cout << "Total Passengers: " << this->heildarfjoldi << std::endl;
+void Journey::prentaallt(){
+    std::cout << "id: " << this->nr << ", fjoldibokathir: " << this->fjoldibokathir << std::endl;
 }
-
-
-/*
-        bool Journey::operator==(Journey& hitt){
-            return this->fjoldibokathir == hitt.getfjoldibokathir() && this->heildarfjoldi == hitt.getheildarfjoldi();
-        }
-        bool Journey::operator!=(Journey& hitt){
-            return !(*this == hitt);
-        }
-        bool Journey::operator<(Journey& hitt){
-                if(this->getNafn() == hitt.getNafn()) {
-                return this->nr < hitt.getId();
-            } 
-            return this->nafn < hitt.getNafn();
-        }
-        bool Journey::operator>(Journey& hitt){
-
-        }
-        bool Journey::operator<=(Journey& hitt){
-
-        }
-        bool Journey::operator>=(Journey& hitt){
-
-        }
-*/
+std::string Journey::getType(){
+    return "Journey";
+}
+bool Journey::operator==(Journey& hitt){
+    return this->nr == hitt.getID();
+}
+bool Journey::operator!=(Journey& hitt){
+    return !(*this == hitt);
+}
+bool Journey::operator<(Journey& hitt){
+        if(this->getfjoldibokathir() == hitt.getfjoldibokathir()) {
+        return this->nr < hitt.getID();
+    } 
+    return this->fjoldibokathir < hitt.getfjoldibokathir();
+}
+bool Journey::operator>(Journey& hitt){
+    return hitt < *this;
+}
+bool Journey::operator<=(Journey& hitt){
+    return !(*this > hitt);
+}
+bool Journey::operator>=(Journey& hitt){
+    return !(*this < hitt);
+}
 
 

@@ -20,13 +20,13 @@ class Journey {
         bool setfjoldibokathir(int fjoldibokathir); // Aðferð til að setja fjölda bókafjalla í ferðinni með áherslu á gilt gildi.
         int getheildarfjoldi(); // Aðferð til að ná í heildarfjölda áttundaferðamanna í ferðinni.
         void setheildarfjoldi(int heildarfjoldi); // Aðferð til að setja heildarfjölda áttundaferðamanna í ferðinni.
-        void prentaallt(); // Aðferð til að prenta út upplýsingar um hjólaförina.
-        /*
+        virtual void prentaallt();
+        virtual std::string getType();
         bool operator==(Journey& hitt);
         bool operator!=(Journey& hitt);
         bool operator<(Journey& hitt);
         bool operator>(Journey& hitt);
         bool operator<=(Journey& hitt);
         bool operator>=(Journey& hitt);
-        */
+       virtual ~Journey() {} // er bara að elta dyr synidæmi
 };

@@ -16,5 +16,6 @@ class batsferth : public Journey{
         batsferth(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur); // Smiður sem mótar batsferth hlut með tilgreindum upplýsingum og kallar á Journey smiðinn.
         bool getyfirbiggdur(); // Aðferð til að ná í upplýsingar um hvort ferja sé yfirbyggð eða ekki.
         void setyfirbiggdur(bool yfirbiggdur); // Aðferð til að setja upplýsingar um hvort ferja sé yfirbyggð eða ekki.
-        void prenta(); // Aðferð til að prenta út upplýsingar um ferjuna.
+        virtual void prenta(); // Aðferð til að prenta út upplýsingar um ferjuna.
+        virtual std::string getType();
 };

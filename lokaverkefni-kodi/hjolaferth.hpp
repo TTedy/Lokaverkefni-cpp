@@ -16,5 +16,6 @@ class hjolaferth : public Journey{
         hjolaferth(int nr, int fjoldibokathir, int heildarfjoldi, int timi); // Smiður sem mótar Journey hlut með tilgreindum upplýsingum.
         int gettimi(); // Aðferð til að ná í fjölda klukkustunda sem hjólaförin er varandi.
         void settimi(int timi);  // Aðferð til að setja fjölda klukkustunda sem hjólaförin er varandi.
-        void prenta(); // Aðferð til að prenta út upplýsingar um hjólaförina.
+        virtual void prenta(); // Aðferð til að prenta út upplýsingar um hjólaförina.
+        virtual std::string getType();
 };

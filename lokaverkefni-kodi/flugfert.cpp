@@ -25,3 +25,6 @@ void flugfert::setstadsetning(std::string setstadsetning){
 void flugfert::prenta(){
     std::cout << "Flugferð: " << this->stadsetning << std::endl;
 }
+std::string flugfert::getType(){
+    return "flugfert";
+}

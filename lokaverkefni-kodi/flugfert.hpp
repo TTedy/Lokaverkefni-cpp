@@ -16,5 +16,6 @@ class flugfert : public Journey{
         flugfert(int nr, int fjoldibokathir, int heildarfjoldi, const std::string& setstadsetning); // Smiður sem mótar Journey hlut með tilgreindum upplýsingum.
         std::string getstadsetning(); // Aðferð til að ná í núverandi staðsetningu flugferju.
         void setstadsetning(std::string setstadsetning);  // Aðferð til að setja nýja staðsetningu flugferju.
-        void prenta();  // Aðferð til að prenta út upplýsingar um flugferjuna.
-};
+        virtual void prenta();  // Aðferð til að prenta út upplýsingar um flugferjuna.
+        virtual std::string getType();
+};  

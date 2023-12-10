@@ -25,3 +25,6 @@
     void hjolaferth::prenta(){
         std::cout << "Hjólaferð: " << this->timi << std::endl;
     }
+    std::string hjolaferth::getType(){
+        return "hjolaferth";
+    }
