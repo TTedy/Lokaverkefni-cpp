@@ -29,4 +29,7 @@ logic-inn sem sýktar út lið 3 er bara að leita eftir ef minna en getheildarf
 vscode utaf einhverju vil ekki nota compilerinn í einhverskonar linker error er buin að reyna laga það í 3-4 klukkustundir allt frá þvi að git clona aftur á sama stað og að seta upp aftur wsl en ekkert gengur upp. 
 ég gefst bara upp út þvi klukkan er orðin half 12. Er farin að gráta í koddann. 
 
+## uppfærlsa á verkefni. 10.12.2023
+
+litið var gert á þann 9.12.2023. í dag lagaði ég þær athugasemdir frá kennara með þvi a gera getType fall og virtual fyrir prent föllin mín.
 
