@@ -3,9 +3,43 @@
 #include "hjolaferth.hpp"
 #include "journey.hpp"
 
+#include <iostream>
+#include <string>
+#include <sstream> // er að elta synidæmi sem er á github
+
 using namespace std;
 
 int main() {
+
+
+    string inntak, skipun, tegund, nafn, annad;
+    int nr, fjoldibokathir, heildarfjoldi;
+
+    do {
+        cout << "Sláðu inn skipun: ";
+        getline(cin, inntak);
+        stringstream ss;
+        ss << inntak;
+        ss >> skipun;
+        if (skipun == "skra" || skipun == "skrá") {
+
+        } else if (skipun == "skoda" || skipun == "skoða") {
+
+        } else if (skipun == "eyda" || skipun == "eyða") {
+
+        }else if (skipun == "breyta" || skipun == "bæta"){
+        
+        }else if (skipun == "prenta" || skipun == "print"){
+
+        } else if (skipun == "hætta" || skipun == "haetta"){
+
+        } else {
+            cout << "Óþekkt skipun" << endl;
+        }
+    }while (skipun != "hætta" && skipun != "haetta")
+
+
+
     // Búa til tilvik af Bátsferð
     batsferth batsferth1(201, 2, 10, false); 
     batsferth batsferth2(202, 20, 100, true);
