@@ -24,6 +24,36 @@ int main() {
         ss >> skipun;
         if (skipun == "skra" || skipun == "skrá") { // held að skrá sé lettara þanning ég ætla að gera það.
             // spyrja um tegund ferðar (sjá betur í handler.cpp)
+            cout << "Sláðu inn tegund ferðar: ";
+            getline(cin, tegund);
+
+            ss << tegund;
+            ss >> tegund;
+            if (val == "flugfert" || val == "flugferð"){  // ef notendinn vil skrá flugferð
+                journeyhandler.skraflug();
+            } else if (val == "hjolaferth" || val == "hjólaferð"){ // ef notendinn vil skrá hjólaferð
+                journeyhandler.skrahjola();
+            } else if (val == "batsferth" || val == "bátsferð"){ // ef notendinn vil skrá bátsferð
+                journeyhandler.skrabath();
+            } else { // ef notendinn slær inn eitthvað annað
+                cout << "Óþekkt tegund ferðar, reyndu aftur" << endl;
+            }
+        } else if (skipun == "bæta" || skipun == "beata") {
+            // held að það sé best að spurja notendan hvaða ferð hann vill bæta ferðenda við.
+            cout << "Sláðu inn tegund ferðar: ";
+            getline(cin, tegund);
+            ss << tegund;
+            ss >> tegund;
+
+            if (val == "flugfert" || val == "flugferð"){  // ef notendinn vil bæta við ferðanda í flugferð
+                journeyhandler.beataflug();
+            } else if (val == "hjolaferth" || val == "hjólaferð"){ // ef notendinn vil bæta við ferðanda í hjólaferð
+                journeyhandler.beatahjola();
+            } else if (val == "batsferth" || val == "bátsferð"){ // ef notendinn vil bæta við ferðanda í bátsferð
+                journeyhandler.beatabath();
+            } else { // ef notendinn slær inn eitthvað annað
+                cout << "Óþekkt tegund ferðar, reyndu aftur" << endl;
+            }
             journeyhandler.beata();
         } else if (skipun == "skoda" || skipun == "skoða") {
             journeyhandler.printallt();

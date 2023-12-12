@@ -1,3 +1,5 @@
+// journeyhandler.hpp
+
 #pragma once
 
 #include <string>
@@ -16,6 +18,10 @@ class journeyhandler{
         void skrabath(Journey* nytt);
         void skraradad(Journey* nytt);
         void beata(int gamla, int nyja);
+        void beataflug(int gamla, int nyja);
+        void beatahjola(int gamla, int nyja);
+        void beatabath(int gamla, int nyja);
+        void skraradadSorted(Journey* nytt);
         void printallt();
         void eyda(int id);
         bool breyta();

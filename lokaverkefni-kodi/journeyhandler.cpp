@@ -1,3 +1,5 @@
+// journeyhandler.cpp
+
 #pragma once
 
 #include "journeyhandler.hpp"
@@ -54,6 +56,38 @@
             // þarf ég að spyrja nontendan um hvaða týpu af ferð þeir vilja bæta við?
             // eða bara gera Journey?
         }
+        void journeyhandler::beataflug(int gamla, int nyja){
+
+        }
+        void journeyhandler::beatahjola(int gamla, int nyja){
+
+        }
+        void journeyhandler::beatabath(int gamla, int nyja){
+
+        }
+
+
+        void journeyhandler::skraradadSorted(Journey* nytt) {
+            JourneyNode* nytt_node = new JourneyNode(nytt);
+
+            JourneyNode* current = this->head;
+            JourneyNode* prev = nullptr;
+
+            while (current && *current->data >= *nytt) {
+                prev = current;
+                current = current->next;
+            }
+            if (prev) { // ef nullptr
+                nytt_node->next = current;
+                prev->next = nytt_node;
+            } else { // ef ekki nullptr
+                nytt_node->next = this->head;
+                this->head = nytt_node;
+            }
+        }
+
+
+
         void journeyhandler::printallt(){
             JourneyNode* current = this->head;
             while(current) {
