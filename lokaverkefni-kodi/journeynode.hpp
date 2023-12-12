@@ -4,15 +4,15 @@
 #include "journeynode.hpp"
 
 struct JourneyNode {
-    Journey* nr;
+    Journey* data;
     JourneyNode* next;
 
-    JourneyNode(Journey* nr) {
-        this->nr = nr;
+    JourneyNode(Journey* data) {
+        this->data = data;
         this->next = nullptr;
     }
 
     ~JourneyNode() {
-        delete this->nr; // Corrected the variable name to match the member variable
+        delete this->data; // Corrected the variable name to match the member variable
     }
 };

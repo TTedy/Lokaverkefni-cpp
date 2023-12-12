@@ -2,6 +2,7 @@
 #include "flugfert.hpp"
 #include "hjolaferth.hpp"
 #include "journey.hpp"
+#include "journeyhandler.hpp"
 
 #include <iostream>
 #include <string>
@@ -21,18 +22,19 @@ int main() {
         stringstream ss;
         ss << inntak;
         ss >> skipun;
-        if (skipun == "skra" || skipun == "skrá") {
-
+        if (skipun == "skra" || skipun == "skrá") { // held að skrá sé lettara þanning ég ætla að gera það.
+            // spyrja um tegund ferðar (sjá betur í handler.cpp)
+            journeyhandler.beata();
         } else if (skipun == "skoda" || skipun == "skoða") {
-
+            journeyhandler.printallt();
         } else if (skipun == "eyda" || skipun == "eyða") {
-
+            journeyhandler.eyda();
         }else if (skipun == "breyta" || skipun == "bæta"){
-        
+            journeyhandler.breyta();
         }else if (skipun == "prenta" || skipun == "print"){
-
+            journeyhandler.prenta();
         } else if (skipun == "hætta" || skipun == "haetta"){
-
+            cout << "Takk fyrir að nota ferðaskráningarkerfið okkar" << endl;
         } else {
             cout << "Óþekkt skipun" << endl;
         }

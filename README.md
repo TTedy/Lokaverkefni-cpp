@@ -33,3 +33,9 @@ vscode utaf einhverju vil ekki nota compilerinn í einhverskonar linker error er
 
 litið var gert á þann 9.12.2023. í dag lagaði ég þær athugasemdir frá kennara með þvi a gera getType fall og virtual fyrir prent föllin mín.
 
+## uppfærlsa á koða. 12.12.2023
+
+Siðustu dagana er ég buin að vera læra fyrir prófið en synilega var ég að læra ranga hlutina þvi þegar ég var bara rett áðan sá ég eins og dæmin bara í koða-num :D,
+en eftir að hafa hreynsað hugan eftir vonsviknina með prófið og personulegt stuff held ég bara afram með koðan eins og með þvi að skapa journeyhandler sem er svipaður og dyragarður með þvi að hafa vinnslu journeynode.
+og að höndla notkun valmyndinar.
+

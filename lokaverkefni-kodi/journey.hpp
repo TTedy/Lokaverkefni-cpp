@@ -28,5 +28,5 @@ class Journey {
         bool operator>(Journey& hitt);
         bool operator<=(Journey& hitt);
         bool operator>=(Journey& hitt);
-       virtual ~Journey() {} // er bara að elta dyr synidæmi
+        virtual ~Journey() {} // er bara að elta dyr synidæmi
 };
