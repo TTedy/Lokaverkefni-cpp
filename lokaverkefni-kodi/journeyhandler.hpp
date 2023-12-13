@@ -7,7 +7,7 @@
 #include "journey.hpp"
 #include "journeynode.hpp"
 
-class journeyhandler : Journey{
+class journeyhandler : public Journey{
     private:
         JourneyNode* head;
         int nr;

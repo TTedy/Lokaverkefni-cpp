@@ -49,6 +49,8 @@ klukkan er að fara vera fjögur og þá er núna komin einhver villa þegar ég
 Er buin að reyna að gera destuctor fyrir alla klasana eyða úr memory með delete, en ekkert er buin að virka. 
 hef líka erfileka að lesa úr þessu, en þegar ég spyr chat þá seygir hann linker runtime issue.
 
+þetta compilar!!
+
 
 
 <a> þarf að seta hér link á myndband </a>

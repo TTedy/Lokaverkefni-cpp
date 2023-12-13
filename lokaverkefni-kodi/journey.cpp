@@ -79,5 +79,10 @@ bool Journey::operator>=(Journey& hitt){
     return !(*this < hitt);
 }
 
+void Journey::prentaallt() {
+    // Provide implementation or leave it empty for now
+    std::cout << "Journey details" << std::endl;
+}
+
 
 
