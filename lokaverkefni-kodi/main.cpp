@@ -20,93 +20,68 @@ int main() {
     journeyhandler journeyhandler;
     Journey journey;
 
-
     do {
         cout << "Sláðu inn skipun: ";
-        stringstream ss(inntak);
         getline(cin, inntak);
+        stringstream ss(inntak);
         ss >> skipun;
 
         if (skipun == "skra" || skipun == "skrá") {
             cout << "Sláðu inn tegund ferðar: ";
-            ss << tegund;
             ss >> tegund;
 
             if (tegund == "flugfert" || tegund == "flugferð") {
                 cout << "skráðu ferð með þvi að skrifa inn þessi gögn: ";
                 cout << "nr, fjoldibokathir, heildarfjoldi, setstadsetning";
-                ss << nr << fjoldibokathir << heildarfjoldi << setstadsetning;
+                ss >> nr >> fjoldibokathir >> heildarfjoldi >> setstadsetning;
                 journeyhandler.skraflug(nr, fjoldibokathir, heildarfjoldi, setstadsetning);
             } else if (tegund == "hjolaferth" || tegund == "hjólaferð") {
                 cout << "skráðu ferð með þvi að skrifa inn þessi gögn: ";
                 cout << "nr, fjoldibokathir, heildarfjoldi, timi";
-                ss << nr << fjoldibokathir << heildarfjoldi << timi;
+                ss >> nr >> fjoldibokathir >> heildarfjoldi >> timi;
                 journeyhandler.skrahjola(nr, fjoldibokathir, heildarfjoldi, timi);
             } else if (tegund == "batsferth" || tegund == "bátsferð") {
                 cout << "skráðu ferð með þvi að skrifa inn þessi gögn: ";
                 cout << "nr, fjoldibokathir, heildarfjoldi, yfirbiggdur";
-                ss << nr << fjoldibokathir << heildarfjoldi << yfirbiggdur;
+                ss >> nr >> fjoldibokathir >> heildarfjoldi >> yfirbiggdur;
                 journeyhandler.skrabath(nr, fjoldibokathir, heildarfjoldi, yfirbiggdur);
             } else {
                 cout << "Óþekkt tegund ferðar, reyndu aftur" << endl;
             }
-        } 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         else if (skipun == "skoda" || skipun == "skoða") {
+        } else if (skipun == "skoda" || skipun == "skoða") {
             cout << "Sláðu inn tegund ferðar: ";
-            ss << val;
             ss >> val;
 
             if (val == "flugfert" || val == "flugferð") {
                 journeyhandler.printflug();
                 cout << "hvaða flugferð viltu skoða gefðu nr? ";
-                ss << ferth;
+                ss >> ferth;
                 journeyhandler.skodaval(ferth);
             }
             if (val == "hjolaferth" || val == "hjólaferð") {
                 journeyhandler.printhjola();
                 cout << "hvaða hjólaferð viltu skoða gefðu nr ? ";
-                ss << ferth;
-                
+                ss >> ferth;
                 journeyhandler.skodaval(ferth);
             }
             if (val == "batsferth" || val == "bátsferð") {
                 journeyhandler.printbath();
                 cout << "hvaða bátsferð viltu skoða gefðu nr ? ";
-                ss << ferth;
+                ss >> ferth;
                 journeyhandler.skodaval(ferth);
             }
             journeyhandler.printallt();
-            } 
-        
-        else if (skipun == "eyda" || skipun == "eyða") {
+        } else if (skipun == "eyda" || skipun == "eyða") {
             journeyhandler.printallt();
             cout << "Sláðu inn númer ferðar sem þú villt eyða: ";
-            ss << nr;
+            ss >> nr;
             journeyhandler.eyda(nr);
-        } 
-        
-        
-        
-        else if (skipun == "breyta" || skipun == "bæta") {
+        } else if (skipun == "breyta" || skipun == "bæta") {
             journeyhandler.printallt();
             cout << "Sláðu inn númer ferðar sem þú villt breyta, og svog með nýju númeri: ";
-            ss << nr << nyja;
+            ss >> nr >> nyja;
             journeyhandler.breyta(nr,nyja);
-        } 
-        
-        
-        
-        
-        else if (skipun == "prenta" || skipun == "print") {
+        } else if (skipun == "prenta" || skipun == "print") {
             do {
                 cout << "veldu hvað þú vilt prenta út: " << endl;
                 cout << "1. prenta allt" << endl;
@@ -114,7 +89,6 @@ int main() {
                 cout << "3. prenta hjólaferðir" << endl;
                 cout << "4. prenta bátsferðir" << endl;
 
-                ss << val;
                 ss >> val;
 
                 if (val == "prentaallt" || val == "prenta allt" || val == "prentallt") {
@@ -131,17 +105,9 @@ int main() {
                     cout << "Óþekkt skipun" << endl;
                 }
             } while (val != "hætta" && val != "haetta");
-        } 
-        
-        
-        
-        
-        else if (skipun == "hætta" || skipun == "haetta") {
+        } else if (skipun == "hætta" || skipun == "haetta") {
             cout << "Takk fyrir að nota ferðaskráningarkerfið okkar" << endl;
-        } 
-        
-        
-        else {
+        } else {
             cout << "Óþekkt skipun" << endl;
         }
     } while (skipun != "hætta" && skipun != "haetta");

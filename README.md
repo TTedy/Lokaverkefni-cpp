@@ -44,7 +44,9 @@ uppfærsla á koða. 13.12.2023
 annars get ég ekki séð hvað annað vantar upp á verkefnið.
 
 klukkan er að fara vera fjögur og þá er núna komin einhver villa þegar ég comiple-a sem ég bara skill ekki.
+<img src="https://cdn.discordapp.com/attachments/770413099111022625/1184524284828340294/image.png?ex=658c4934&is=6579d434&hm=b17c67ea168b6652940c651f7f76a5517873e569da72d6d3b37d94e47eb00eaa&"> </img>
 
+Er buin að reyna að gera destuctor fyrir alla klasana eyða úr memory með delete, en ekkert er buin að virka. 
 
 
 
