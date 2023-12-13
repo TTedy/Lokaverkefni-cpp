@@ -43,6 +43,8 @@ uppfærsla á koða. 13.12.2023
 þar sem þetta var siðasti timin spónninar var þetta voðalega mikilvægur timi það komu fram miklar villur í main.cpp skránni minni þar sem ég var að striðast með hvernig ég gerði nöfnin fyrir klassana og föll. en náði að laga það.
 annars get ég ekki séð hvað annað vantar upp á verkefnið.
 
+klukkan er að fara vera fjögur og þá er núna komin einhver villa þegar ég comiple-a sem ég bara skill ekki.
+
 
 
 
