@@ -113,6 +113,10 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
             }
         }
 
+
+
+        
+
         void journeyhandler::skodaval(int nr) {
             JourneyNode* current = this->head;
             while (current) {

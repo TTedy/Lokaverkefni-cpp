@@ -35,28 +35,32 @@ void Journey::setID(int nr){
 int Journey::getfjoldibokathir(){
     return this->fjoldibokathir;
 }
-// Aðferð til að setja fjölda bókafjalla í ferðinni með áherslu á gilt gildi.
-bool Journey::setfjoldibokathir(int fjoldibokathir){
-    if (fjoldibokathir <= getheildarfjoldi() && fjoldibokathir >= 0) {
-        // Tryggðu að ekki sé hægt að skrá fleiri farþega í ferð en pláss er fyrir.
-        cout << "Þú getur ekki skráð fleiri farþega í ferðina en pláss er fyrir" << endl;
-        return false;
-    } else {
-        this->fjoldibokathir = fjoldibokathir;
-        return true;
-    }
-}
+
+
 // Aðferð til að ná í heildarfjölda áttundaferðamanna í ferðinni.
 int Journey::getheildarfjoldi(){
     return this->heildarfjoldi;
 }
+
 // Aðferð til að setja heildarfjölda áttundaferðamanna í ferðinni.
 void Journey::setheildarfjoldi(int heildarfjoldi){
     this->heildarfjoldi = heildarfjoldi;
 }
-std::string Journey::getType(){
-    return "Journey";
+
+// Aðferð til að setja fjölda bókafjalla í ferðinni með áherslu á gilt gildi.
+bool Journey::setfjoldibokathir(int fjoldibokathir) {
+    if (fjoldibokathir >= 0 && fjoldibokathir <= getheildarfjoldi()) {
+        this->fjoldibokathir = fjoldibokathir;
+        cout << "þetta var keyrt" << endl;
+        return true;
+    } else {
+        // Tryggðu að ekki sé hægt að skrá fleiri farþega í ferðina en pláss er fyrir.
+        cout << "Þú getur ekki skráð fleiri farþega í ferðina en pláss er fyrir" << endl;
+        return false;
+    }
 }
+
+
 bool Journey::operator==(Journey& hitt){
     return this->nr == hitt.getID();
 }
@@ -79,9 +83,15 @@ bool Journey::operator>=(Journey& hitt){
     return !(*this < hitt);
 }
 
+std::string Journey::getType() {
+    return "Jouney";
+}
+
 void Journey::prentaallt() {
-    // Provide implementation or leave it empty for now
-    std::cout << "Journey details" << std::endl;
+    cout << "Nr: " << this->nr << endl;
+    cout << "Fjöldi bókaðra þátta: " << this->fjoldibokathir << endl;
+    cout << "Heildarfjöldi áttundaferðamanna: " << this->heildarfjoldi << endl;
+    cout << "Tegund ferðar: " << this->getType() << endl;
 }
 
 

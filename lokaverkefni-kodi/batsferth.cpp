@@ -11,7 +11,7 @@ using namespace std;
 
 // Tómi smiður fyrir hjolaferth hlutinn.
 batsferth::batsferth(){
-    this->yfirbiggdur = false;       
+    this->yfirbiggdur = false;      
 }
 // Smiður sem mótar flugfert hlut með tilgreindum upplýsingum og kallar á Journey smiðinn.
 batsferth::batsferth(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur) : Journey(nr,fjoldibokathir, heildarfjoldi){
@@ -36,3 +36,4 @@ void batsferth::prenta(){
 std::string batsferth::getType(){
     return "batsferth";
 }
+

@@ -13,6 +13,7 @@ class Journey {
         int nr; // Auðkenni ferðar 
         int fjoldibokathir; // Fjöldi bókafjalla í ferðinni
         int heildarfjoldi; // Heildarfjöldi áttundaferðamanna í ferðinni
+        std::string type;
     public:
         Journey(); // Tómir smiður fyrir Journey hlutinn.
         Journey(int nr, int fjoldibokathir, int heildarfjoldi); // Smiður sem mótar Journey hlut með tilgreindum upplýsingum.
@@ -23,7 +24,7 @@ class Journey {
         int getheildarfjoldi(); // Aðferð til að ná í heildarfjölda áttundaferðamanna í ferðinni.
         void setheildarfjoldi(int heildarfjoldi); // Aðferð til að setja heildarfjölda áttundaferðamanna í ferðinni.
         virtual void prentaallt();
-        std::string getType();
+        virtual std::string getType();
         bool operator==(Journey& hitt);
         bool operator!=(Journey& hitt);
         bool operator<(Journey& hitt);
