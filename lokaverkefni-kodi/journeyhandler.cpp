@@ -113,10 +113,6 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
             }
         }
 
-
-
-        
-
         void journeyhandler::skodaval(int nr) {
             JourneyNode* current = this->head;
             while (current) {
@@ -129,7 +125,6 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
             
             cout << "Þessi ferð er ekki til" << endl;
         }
-
 
         void journeyhandler::eyda(int nr){
             if(this->head) {
