@@ -116,7 +116,10 @@ int main() {
             cout << "Sláðu inn númer ferðar sem þú vilt breyta, og svo með nýju númeri: ";
             cin >> nr >> nyja;
             journeyhandler.breyta(nr, nyja);
-            cout << "Breytti ferð nr. " << nr << " í " << nyja << endl; // smá villa ef það er skráð of margar ferðir þá verður tala í 0 :D
+            cout << "Breytti ferð nr. " << nr << " í " << nyja << endl; 
+            cout << "\n" << endl;
+            cout << "\n" << endl;
+            journeyhandler.printallt();
             break; // hata þegar þetta keyrir endalaust
         } else if (skipun == "prentaallt" || skipun == "prenta allt" || skipun == "prentallt") {
             journeyhandler.printallt();
@@ -133,7 +136,7 @@ int main() {
         }
     } while (skipun != "hætta" && skipun != "haetta");
 
-
+    // takk fyrir spönnina. þetta var mjög gaman að gera. ég er búinn að vera að vinna í þessu í 7 daga og er búinn að læra mikið.
 
     return 0;
 }

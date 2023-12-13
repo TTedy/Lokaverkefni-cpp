@@ -62,39 +62,48 @@ bool Journey::setfjoldibokathir(int fjoldibokathir) { // afhverju verður þetta
     }
 }
 
-
+// Fall sem ber saman númer ferða til að athuga hvort þær eru jafnar
 bool Journey::operator==(Journey& hitt){
     return this->nr == hitt.getID();
 }
+
+// Fall sem ber saman númer ferða til að athuga hvort þær eru mismunandi
 bool Journey::operator!=(Journey& hitt){
     return !(*this == hitt);
 }
+
+// Fall sem ber saman fjölda bókaðra þátta og númer ferða til að athuga hvort þessi ferð er minni en önnur
 bool Journey::operator<(Journey& hitt){
-        if(this->getfjoldibokathir() == hitt.getfjoldibokathir()) {
+    if(this->getfjoldibokathir() == hitt.getfjoldibokathir()) {
         return this->nr < hitt.getID();
     } 
     return this->fjoldibokathir < hitt.getfjoldibokathir();
 }
+
+// Fall sem athugar hvort þessi ferð er stærri en önnur
 bool Journey::operator>(Journey& hitt){
     return hitt < *this;
 }
+
+// Fall sem athugar hvort þessi ferð er minni eða jafn stór og önnur
 bool Journey::operator<=(Journey& hitt){
     return !(*this > hitt);
 }
+
+// Fall sem athugar hvort þessi ferð er stærri eða jafn stór og önnur
 bool Journey::operator>=(Journey& hitt){
     return !(*this < hitt);
 }
 
+// Fall sem skilar tegund ferðar sem streng
 std::string Journey::getType() {
     return "Jouney";
 }
 
+// Fall sem prentar út allar upplýsingar um ferð
 void Journey::prentaallt() {
     cout << "Nr: " << this->nr << endl;
     cout << "Fjöldi bókaðra þátta: " << this->fjoldibokathir << endl;
     cout << "Heildarfjöldi áttundaferðamanna: " << this->heildarfjoldi << endl;
     cout << "Tegund ferðar: " << this->getType() << endl;
 }
-
-
-
