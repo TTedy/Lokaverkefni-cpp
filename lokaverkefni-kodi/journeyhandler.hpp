@@ -7,7 +7,7 @@
 #include "journey.hpp"
 #include "journeynode.hpp"
 
-class journeyhandler{
+class journeyhandler : Journey{
     private:
         JourneyNode* head;
         int nr;
@@ -30,5 +30,4 @@ class journeyhandler{
         void eyda(int id);
         bool breyta(int nr, int nyja);
         void prenta();
-        ~journeyhandler();
 };

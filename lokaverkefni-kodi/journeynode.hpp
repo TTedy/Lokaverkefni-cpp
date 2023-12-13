@@ -12,7 +12,8 @@ struct JourneyNode {
         this->next = nullptr;
     }
 
+    /*
     ~JourneyNode() {
         delete this->data; // Corrected the variable name to match the member variable
-    }
+    }*/
 };

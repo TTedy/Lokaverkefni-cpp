@@ -5,6 +5,8 @@
 #include <string>
 #include <iostream>
 
+
+
 // head klassin fyrir verkefnið sem heldur utan um ferðirnar
 class Journey {
     private:
@@ -28,5 +30,4 @@ class Journey {
         bool operator>(Journey& hitt);
         bool operator<=(Journey& hitt);
         bool operator>=(Journey& hitt);
-        virtual ~Journey() {} // er bara að elta dyr synidæmi
 };

@@ -1,6 +1,13 @@
 // batsferth.cpp
 
+#include "flugfert.hpp"
+#include "journey.hpp"
+#include "journeynode.hpp"
+#include "journeyhandler.hpp"
+#include "hjolaferth.hpp"
 #include "batsferth.hpp"
+
+using namespace std;
 
 // Tómi smiður fyrir hjolaferth hlutinn.
 batsferth::batsferth(){

@@ -4,6 +4,11 @@
 #include <string>
 
 #include "journey.hpp"
+#include "flugfert.hpp"
+#include "journeynode.hpp"
+#include "journeyhandler.hpp"
+#include "hjolaferth.hpp"
+#include "batsferth.hpp"
 using namespace std;
 
 // Tómi smiður fyrir Journey hlutinn.
@@ -73,5 +78,6 @@ bool Journey::operator<=(Journey& hitt){
 bool Journey::operator>=(Journey& hitt){
     return !(*this < hitt);
 }
+
 
 
