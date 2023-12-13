@@ -1,11 +1,12 @@
 // journeyhandler.cpp
 
-#include "flugfert.hpp"
+#include "flugfert.hpp" // ég var að include-a allt fyrir villuna aður í dag 13.12.2023
 #include "journey.hpp"
 #include "journeynode.hpp"
 #include "journeyhandler.hpp"
 #include "hjolaferth.hpp"
 #include "batsferth.hpp"
+
 #include <iostream>
 #include <string>
 
@@ -44,26 +45,22 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
         // Fall sem raðar ferð inn í rétta röð í lista eftir heildarfjölda
         void journeyhandler::skraradad(Journey* nytt) {
             JourneyNode* nyttNode = new JourneyNode(nytt);
-            
             if (!this->head || this->head->data->getheildarfjoldi() <= nytt->getheildarfjoldi()) {
                 nyttNode->next = this->head;
                 this->head = nyttNode;
             } else {
                 JourneyNode* current = this->head;
                 JourneyNode* prev = nullptr;
-
-                while (current && current->data->getheildarfjoldi() > nytt->getheildarfjoldi()) {
+                while (current && current->data->getheildarfjoldi() > nytt->getheildarfjoldi()) {  
                     prev = current;
                     current = current->next;
                 }
-
-                if (prev) {
+                if (prev) { 
                     prev->next = nyttNode;
-                } else {
+                } else { 
                     nyttNode->next = this->head;
                     this->head = nyttNode;
                 }
-
                 nyttNode->next = current;
             }
         }

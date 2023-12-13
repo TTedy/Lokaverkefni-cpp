@@ -16,7 +16,7 @@ int main() {
 
     string inntak, skipun, tegund, val, hvert, setstadsetning;
     int nr, timi, heildarfjoldi, fjoldibokathir, nyja, ferth;
-    bool yfirbiggdur;
+    bool yfirbiggdur, run;
 
     journeyhandler journeyhandler;
     Journey journey;
@@ -41,7 +41,18 @@ int main() {
     // Búa til tilvik af Journey og nota printallt() aðferðina til að prenta út upplýsingar um ferðina
     Journey myJourney(1, 30, 100);
 
-
+    cout << "\n" << endl;
+    cout << "Velkomin í ferðaskráningarkerfið okkar" << endl;
+    cout << "Þú getur skráð ferðir með skipunni skra" << endl;
+    cout << "Skoðað ferðir með skipunni skoda" << endl;
+    cout << "Eyðað ferð með skipunni eyda" << endl;
+    cout << "Breytt ferð með skipunni breyta" << endl;
+    cout << "Prentað allar ferðir með skipunni prentaallt" << endl;
+    cout << "Prentað flugferðir með skipunni prentaflug" << endl;
+    cout << "Prentað hjólaferðir með skipunni prentahjola" << endl;
+    cout << "Prentað bátsferðir með skipunni prentabath" << endl;
+    cout << "Hætt með skipunni hætta" << endl;
+    cout << "\n" << endl;
     do {
         cout << "Sláðu inn skipun: ";
         getline(cin, inntak);
@@ -50,77 +61,122 @@ int main() {
 
         if (skipun == "skra" || skipun == "skrá") {
             cout << "Sláðu inn tegund ferðar: ";
-            cin >> tegund;
+            cout << "flugfert, hjolaferth, batsferth" << endl;
+            cout << "ef þú villt hætta í skra þá þarft þú bara að skifa hætta" << endl;
 
-            if (tegund == "flugfert" || tegund == "flugferð") {
-                cout << "skráðu ferð með því að skrifa inn þessi gögn: ";
-                cout << "nr, fjoldibokathir, heildarfjoldi, setstadsetning";
-                cin >> nr >> fjoldibokathir >> heildarfjoldi >> setstadsetning;
-                journeyhandler.skraflug(nr, fjoldibokathir, heildarfjoldi, setstadsetning);
-                journeyhandler.printflug();
-            } else if (tegund == "hjolaferth" || tegund == "hjólaferð") {
-                cout << "skráðu ferð með því að skrifa inn þessi gögn: ";
-                cout << "nr, fjoldibokathir, heildarfjoldi, timi";
-                cin >> nr >> fjoldibokathir >> heildarfjoldi >> timi;
-                journeyhandler.skrahjola(nr, fjoldibokathir, heildarfjoldi, timi);
-                cout << "Skráði hjólaferð nr. " << nr << endl;
-                journeyhandler.printhjola();
-            } else if (tegund == "batsferth" || tegund == "bátsferð") {
-                cout << "skráðu ferð með því að skrifa inn þessi gögn: ";
-                cout << "nr, fjoldibokathir, heildarfjoldi, yfirbiggdur";
-                cin >> nr >> fjoldibokathir >> heildarfjoldi >> yfirbiggdur;
-                journeyhandler.skrabath(nr, fjoldibokathir, heildarfjoldi, yfirbiggdur);
-                cout << "Skráði bátsferð nr. " << nr << endl;
-                journeyhandler.printbath();
-            } else {
-                cout << "Óþekkt tegund ferðar, reyndu aftur" << endl;
-            }
+            do{
+                getline(cin, inntak);
+                stringstream ss(inntak);
+                ss >> tegund;
+                if (tegund == "flugfert" || tegund == "flugferð") {
+                    cout << "skráðu ferð með því að skrifa inn þessi gögn: ";
+                    cout << "nr, fjoldibokathir, heildarfjoldi, setstadsetning";
+                    cin >> nr >> fjoldibokathir >> heildarfjoldi >> setstadsetning;
+                    journeyhandler.skraflug(nr, fjoldibokathir, heildarfjoldi, setstadsetning);
+                    journeyhandler.printflug();
+                } else if (tegund == "hjolaferth" || tegund == "hjólaferð") {
+                    cout << "skráðu ferð með því að skrifa inn þessi gögn: ";
+                    cout << "nr, fjoldibokathir, heildarfjoldi, timi";
+                    cin >> nr >> fjoldibokathir >> heildarfjoldi >> timi;
+                    journeyhandler.skrahjola(nr, fjoldibokathir, heildarfjoldi, timi);
+                    cout << "Skráði hjólaferð nr. " << nr << endl;
+                    journeyhandler.printhjola();
+                } else if (tegund == "batsferth" || tegund == "bátsferð") {
+                    cout << "skráðu ferð með því að skrifa inn þessi gögn: ";
+                    cout << "nr, fjoldibokathir, heildarfjoldi, yfirbiggdur";
+                    cin >> nr >> fjoldibokathir >> heildarfjoldi >> yfirbiggdur;
+                    journeyhandler.skrabath(nr, fjoldibokathir, heildarfjoldi, yfirbiggdur);
+                    cout << "Skráði bátsferð nr. " << nr << endl;
+                    journeyhandler.printbath();
+                } else if (tegund == "hætta" || tegund == "haetta") {
+                cout << "Takk fyrir að nota skraningar okkar" << endl;
+                }else {
+                    cout << "Óþekkt tegund ferðar, reyndu aftur" << endl;
+                }
+            } while (tegund != "hætta" && tegund != "haetta");
         } 
         else if (skipun == "skoda" || skipun == "skoða") {
             cout << "Sláðu inn tegund ferðar: ";
-            cin >> tegund;
+            cout << "flugfert, hjolaferth, batsferth" << endl;
+            cout << "ef þú villt hætta í skra þá þarft þú bara að skifa hætta" << endl;
+            do{
+                getline(cin, inntak);
+                stringstream ss(inntak);
+                ss >> tegund;
+                if (tegund == "flugfert" || tegund == "flugferð") {
+                    journeyhandler.printflug();
+                    cout << "Hvaða flugferð viltu skoða? Gefðu nr: ";
+                    getline(cin, inntak);
+                    stringstream ss(inntak);
+                    ss >> ferth;
+                    cout << "\n";
+                    journeyhandler.skodaval(ferth);
+                    cout << "\n";
+                    cout << "nú matt þú breyta ferðinni ef þú vilt" << endl;
+                    cout << "eða hætta ef þú vilt með skipunni hætta" << endl;
+                } else if (tegund == "hjolaferth" || tegund == "hjólaferð") {
+                    journeyhandler.printhjola();
+                    cout << "Hvaða hjólaferð viltu skoða? Gefðu nr: ";
+                    getline(cin, inntak);
+                    stringstream ss(inntak);
+                    ss >> ferth;
+                    cout << "\n";
+                    journeyhandler.skodaval(ferth);
+                    cout << "\n";
+                    cout << "nú matt þú breyta ferðinni ef þú vilt" << endl;
+                    cout << "eða hætta ef þú vilt með skipunni hætta" << endl;
+                } else if (tegund == "batsferth" || tegund == "bátsferð") {
+                    journeyhandler.printbath();
+                    cout << "Hvaða bátsferð viltu skoða? Gefðu nr: ";
+                    getline(cin, inntak);
+                    stringstream ss(inntak);
+                    ss >> ferth;
+                    cout << "\n";
+                    journeyhandler.skodaval(ferth);
+                    cout << "\n";
+                    cout << "nú matt þú breyta ferðinni ef þú vilt" << endl;
+                    cout << "eða hætta ef þú vilt með skipunni hætta" << endl;
+                } else if (tegund == "hætta" || tegund == "haetta") {
+                    cout << "Takk fyrir að nota skoðun okkar" << endl;
+                    cout << "\n";}
+                else {
+                    cout << "Óþekkt tegund ferðar, reyndu aftur" << endl;
+                }
+            }while (tegund != "hætta" && tegund != "haetta");
 
-            if (tegund == "flugfert" || tegund == "flugferð") {
-                journeyhandler.printflug();
-                cout << "Hvaða flugferð viltu skoða? Gefðu nr: ";
-                cin >> ferth;
-                cout << "\n";
-                journeyhandler.skodaval(ferth);
-            } else if (tegund == "hjolaferth" || tegund == "hjólaferð") {
-                journeyhandler.printhjola();
-                cout << "Hvaða hjólaferð viltu skoða? Gefðu nr: ";
-                cin >> ferth;
-                cout << "\n";
-                journeyhandler.skodaval(ferth);
-            } else if (tegund == "batsferth" || tegund == "bátsferð") {
-                journeyhandler.printbath();
-                cout << "Hvaða bátsferð viltu skoða? Gefðu nr: ";
-                cin >> ferth; 
-                cout << "\n";
-                journeyhandler.skodaval(ferth);
-            } else {
-                cout << "Óþekkt tegund ferðar, reyndu aftur" << endl;
-            }
         } else if (skipun == "eyda" || skipun == "eyða") {
+
             journeyhandler.printallt();
             cout << "Sláðu inn númer ferðar sem þú vilt eyða: ";
-            
-            cin >> nr;
-            journeyhandler.eyda(nr);
-            cout << "Eyddi ferð nr. " << nr << endl;
-            cout << "\n" << endl;
-            journeyhandler.printallt();
-            break; // hada þegar þetta keyrir endalaust
-        } else if (skipun == "breyta" || skipun == "bæta") {
+            run = true;
+            do{
+                getline(cin, inntak);
+                stringstream ss(inntak);
+                ss >> nr;
+                journeyhandler.eyda(nr);
+                cout << "Eyddi ferð nr. " << nr << endl;
+                cout << "\n" << endl;
+                journeyhandler.printallt();
+                run = false;
+            } while (run == true);
+        } else if (skipun == "beata" || skipun == "bæta") {
             journeyhandler.printallt();
             cout << "Sláðu inn númer ferðar sem þú vilt breyta, og svo með nýju númeri: ";
-            cin >> nr >> nyja;
+            run = true;
+            do
+            {
+            getline(cin, inntak);
+            stringstream ss(inntak);
+            ss >> nr >> nyja;
             journeyhandler.breyta(nr, nyja);
             cout << "Breytti ferð nr. " << nr << " í " << nyja << endl; 
             cout << "\n" << endl;
             cout << "\n" << endl;
             journeyhandler.printallt();
-            break; // hata þegar þetta keyrir endalaust
+            cout << "\n" << endl;
+            cout << "\n" << endl; // þarf að læra betri leið að bua til linur
+            run = false;
+            } while (run == true);
         } else if (skipun == "prentaallt" || skipun == "prenta allt" || skipun == "prentallt") {
             journeyhandler.printallt();
         } else if (skipun == "prentaflug" || skipun == "prenta flug" || skipun == "prenta flugferðir") {
@@ -136,7 +192,7 @@ int main() {
         }
     } while (skipun != "hætta" && skipun != "haetta");
 
-    // takk fyrir spönnina. þetta var mjög gaman að gera. ég er búinn að vera að vinna í þessu í 7 daga og er búinn að læra mikið.
+    // takk fyrir spönnina
 
     return 0;
 }
