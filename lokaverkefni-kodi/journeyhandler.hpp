@@ -28,4 +28,6 @@ class journeyhandler : public Journey{ // þarf að erfða frá Journey
         void eyda(int id); // Fall sem eyðir ferð úr lista
         bool breyta(int nr, int nyja); // Fall sem breytir ferð í lista
         void prenta(); // Fall sem prentar út ferð í lista
+
+        virtual ~journeyhandler(); // Destructor fyrir Journey hlutinn.
 };

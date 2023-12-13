@@ -31,4 +31,8 @@ class Journey {
         bool operator>(Journey& hitt); // Yfirskrifar > virkjann til að geta borið saman ferðir.
         bool operator<=(Journey& hitt); // Yfirskrifar <= virkjann til að geta borið saman ferðir.
         bool operator>=(Journey& hitt); // Yfirskrifar >= virkjann til að geta borið saman ferðir.
+
+        std::string getstadsetning();
+
+        virtual ~Journey(); // Destructor fyrir Journey hlutinn.
 };

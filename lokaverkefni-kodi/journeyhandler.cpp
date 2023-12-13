@@ -80,6 +80,8 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
             while(current) {
                 if (current->data->getType() == "flugfert") {
                     current->data->prentaallt();
+                    
+                    
                 }
                 current = current->next;
             }
@@ -167,5 +169,14 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
             while(current) {
                 current->data->prentaallt();
                 current = current->next;
+            }
+        }
+
+        journeyhandler::~journeyhandler(){
+            while(this->head) {
+                JourneyNode* nytt_head = this->head->next;
+                // delete this->head->dyrid
+                delete this->head;
+                this->head = nytt_head;
             }
         }

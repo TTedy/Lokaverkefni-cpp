@@ -107,3 +107,5 @@ void Journey::prentaallt() {
     cout << "Heildarfjöldi áttundaferðamanna: " << this->heildarfjoldi << endl;
     cout << "Tegund ferðar: " << this->getType() << endl;
 }
+
+

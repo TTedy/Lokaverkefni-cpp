@@ -65,29 +65,40 @@ int main() {
             cout << "ef þú villt hætta í skra þá þarft þú bara að skifa hætta" << endl;
 
             do{
+                cout << "Sláðu inn tegund ferðar, ";
+                cout << "eða skypun til þess að hætta: ";
                 getline(cin, inntak);
                 stringstream ss(inntak);
                 ss >> tegund;
                 if (tegund == "flugfert" || tegund == "flugferð") {
                     cout << "skráðu ferð með því að skrifa inn þessi gögn: ";
                     cout << "nr, fjoldibokathir, heildarfjoldi, setstadsetning";
-                    cin >> nr >> fjoldibokathir >> heildarfjoldi >> setstadsetning;
+                    getline(cin, inntak);
+                    stringstream ss(inntak);
+                    ss >> nr >> fjoldibokathir >> heildarfjoldi >> setstadsetning;
                     journeyhandler.skraflug(nr, fjoldibokathir, heildarfjoldi, setstadsetning);
                     journeyhandler.printflug();
+                    cout << "\n";
                 } else if (tegund == "hjolaferth" || tegund == "hjólaferð") {
                     cout << "skráðu ferð með því að skrifa inn þessi gögn: ";
                     cout << "nr, fjoldibokathir, heildarfjoldi, timi";
-                    cin >> nr >> fjoldibokathir >> heildarfjoldi >> timi;
+                    getline(cin, inntak);
+                    stringstream ss(inntak);
+                    ss >> nr >> fjoldibokathir >> heildarfjoldi >> timi;
                     journeyhandler.skrahjola(nr, fjoldibokathir, heildarfjoldi, timi);
                     cout << "Skráði hjólaferð nr. " << nr << endl;
                     journeyhandler.printhjola();
+                    cout << "\n";
                 } else if (tegund == "batsferth" || tegund == "bátsferð") {
                     cout << "skráðu ferð með því að skrifa inn þessi gögn: ";
                     cout << "nr, fjoldibokathir, heildarfjoldi, yfirbiggdur";
-                    cin >> nr >> fjoldibokathir >> heildarfjoldi >> yfirbiggdur;
+                    getline(cin, inntak);
+                    stringstream ss(inntak);
+                    ss >> nr >> fjoldibokathir >> heildarfjoldi >> yfirbiggdur;
                     journeyhandler.skrabath(nr, fjoldibokathir, heildarfjoldi, yfirbiggdur);
                     cout << "Skráði bátsferð nr. " << nr << endl;
                     journeyhandler.printbath();
+                    cout << "\n";cout << "\n";
                 } else if (tegund == "hætta" || tegund == "haetta") {
                 cout << "Takk fyrir að nota skraningar okkar" << endl;
                 }else {
