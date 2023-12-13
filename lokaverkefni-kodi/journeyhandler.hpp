@@ -24,7 +24,7 @@ class journeyhandler{
         void skraradadSorted(Journey* nytt);
         void printallt();
         void eyda(int id);
-        bool breyta();
+        bool breyta(int gamla, int nyja);
         void prenta();
         ~journeyhandler();
 };

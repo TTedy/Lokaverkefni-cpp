@@ -13,7 +13,7 @@ using namespace std;
 int main() {
 
 
-    string inntak, skipun, tegund, nafn, annad;
+    string inntak, skipun, tegund, nafn, annad, val;
     int nr, fjoldibokathir, heildarfjoldi;
 
     do {
@@ -56,13 +56,70 @@ int main() {
             }
             journeyhandler.beata();
         } else if (skipun == "skoda" || skipun == "skoða") {
+            cout << "Sláðu inn tegund ferðar: ";
+            getline(cin, val);
+            ss << val;
+            ss >> val;
+
+            if (val == "flugfert" || val == "flugferð"){
+                flugfert1.prenta();
+                cout << "hvaða flugferð viltu skoða? ";
+
+            }
+            if (val == "hjolaferth" || val == "hjólaferð"){
+                hjolaferth1.prenta();
+                cout << "hvaða hjólaferð viltu skoða? ";
+
+            }
+            if (val == "batsferth" || val == "bátsferð"){
+                batsferth1.prenta();
+                cout << "hvaða bátsferð viltu skoða? ";
+                // á ég að gera þessa skypun inni subclassanum eða í handlerinum?
+            }
             journeyhandler.printallt();
         } else if (skipun == "eyda" || skipun == "eyða") {
-            journeyhandler.eyda();
+            journeyhandler.prentaallt();
+            cout << "Sláðu inn númer ferðar sem þú villt eyða: ";
+            getline(cin, nr);
+            ss << nr;
+            ss >> nr;
+
+            journeyhandler.eyda(nr);
+
         }else if (skipun == "breyta" || skipun == "bæta"){
+            journeyhandler.prentaallt();
+            cout << "Sláðu inn númer ferðar sem þú villt breyta: ";
+            getline(cin, nr);
+            ss << nr;
+            ss >> nr;
             journeyhandler.breyta();
         }else if (skipun == "prenta" || skipun == "print"){
-            journeyhandler.prenta();
+            
+           do{ 
+            cout << "veldu hvað þú vilt prenta út: " << endl;
+            cout << "1. prenta allt" << endl;
+            cout << "2. prenta flugferðir" << endl;
+            cout << "3. prenta hjólaferðir" << endl;
+            cout << "4. prenta bátsferðir" << endl;
+
+            getline(cin, val);
+            ss << val;
+            ss >> val;
+            
+            if (val == "1"){
+                journeyhandler.printallt();
+            } else if (val == "2"){
+                journeyhandler.printflug();
+            } else if (val == "3"){
+                journeyhandler.printhjola();
+            } else if (val == "4"){
+                journeyhandler.printbath();
+            } else if (val == "heatta" || val == "hætta"){
+                cout << "Takk fyrir að nota pretunar fall ferðaskráningarkerfið okkar" << endl;
+            }else {
+                cout << "Óþekkt skipun" << endl;
+            } } while (val != "hætta" && val != "haetta");
+
         } else if (skipun == "hætta" || skipun == "haetta"){
             cout << "Takk fyrir að nota ferðaskráningarkerfið okkar" << endl;
         } else {

@@ -54,7 +54,7 @@
 
         void journeyhandler::beata(){
             // þarf ég að spyrja nontendan um hvaða týpu af ferð þeir vilja bæta við?
-            // eða bara gera Journey? // commita 
+            // eða bara gera Journey? 
         }
         void journeyhandler::beataflug(int gamla, int nyja){
 
@@ -95,16 +95,16 @@
                 current = current->next;
     }
         }
-        void journeyhandler::eyda(int id){
+        void journeyhandler::eyda(int nr){
             if(this->head) {
-                if(this->head->data->getID() == id) {
+                if(this->head->data->getID() == nr) {
                     JourneyNode* nytt_head = this->head->next;
                     delete this->head;
                     this->head = nytt_head;
                 } else {
                     JourneyNode* current = this->head;
                     JourneyNode* prev = this->head;
-                    while(current && current->data->getID() != id) {
+                    while(current && current->data->getID() != nr) {
                         prev = current;
                         current = current->next;
                     }
