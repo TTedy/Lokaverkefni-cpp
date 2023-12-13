@@ -54,6 +54,7 @@ int main() {
     cout << "Hætt með skipunni hætta" << endl;
     cout << "\n" << endl;
     do {
+        cout << "\n" << endl;
         cout << "Sláðu inn skipun: ";
         getline(cin, inntak);
         stringstream ss(inntak);

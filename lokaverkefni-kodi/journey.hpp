@@ -32,7 +32,9 @@ class Journey {
         bool operator<=(Journey& hitt); // Yfirskrifar <= virkjann til að geta borið saman ferðir.
         bool operator>=(Journey& hitt); // Yfirskrifar >= virkjann til að geta borið saman ferðir.
 
-        std::string getstadsetning();
-
-        virtual ~Journey(); // Destructor fyrir Journey hlutinn.
+        /*
+        virtual std::string getstadsetning();
+        virtual int gettimi();
+        virtual bool getyfirbiggdur();
+        næ ekki að gera þetta an þess að fá villur svipuð þessu /usr/bin/ld: /tmp/cchcWLgV.o:(.data.rel.ro._ZTV9batsferth[_ZTV9batsferth]+0x20)*/
 };

@@ -68,8 +68,17 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
         // Fall sem prentar út allar ferðir í lista
         void journeyhandler::printallt(){
             JourneyNode* current = this->head;
+            
             while(current) {
                 current->data->prentaallt();
+                /* næ ekki að klára þetta.
+                if (this->getType() == "flugferth") {
+                    cout << "Staðsetning: " << current->data->getstadsetning() << endl;
+                } else if (this->getType() == "hjolaferth") {
+                    cout << "Tími hjólaferðar: " << current->data->gettimi() << endl;
+                } else if (this->getType() == "batsferth") {
+                    cout << "Er báturinn yfirbyggður: " << (current->data->getyfirbiggdur() ? "true" : "false") << endl;
+                }*/
                 current = current->next;
             }
         }
@@ -172,11 +181,3 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
             }
         }
 
-        journeyhandler::~journeyhandler(){
-            while(this->head) {
-                JourneyNode* nytt_head = this->head->next;
-                // delete this->head->dyrid
-                delete this->head;
-                this->head = nytt_head;
-            }
-        }

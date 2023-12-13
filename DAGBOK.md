@@ -70,6 +70,7 @@ annar núna virkar allt frá skrá þar sem það keyrir ekki "setfjoldibokathir
 
 <p> það var uppfært valmynd þar sem notendin þarf ekki að enda notkun sinni og byrja aftur þegar hann vil skipta um valkost </p>
 
+[Nýrra myndband af virkni koðans](https://youtu.be/FWx9SFCCxho "myndband af virkni koðans.")
 
 [myndband af virkni koðans.](https://youtu.be/S0HHI26EdWg "myndband af virkni koðans.")
 
