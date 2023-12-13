@@ -48,7 +48,7 @@ void Journey::setheildarfjoldi(int heildarfjoldi){
 }
 
 // Aðferð til að setja fjölda bókafjalla í ferðinni með áherslu á gilt gildi.
-bool Journey::setfjoldibokathir(int fjoldibokathir) {
+bool Journey::setfjoldibokathir(int fjoldibokathir) { // afhverju verður þetta hunsað þegar ég skra i ferðina?
     if (fjoldibokathir >= 0 && fjoldibokathir <= getheildarfjoldi()) {
         this->fjoldibokathir = fjoldibokathir;
         cout << "þetta var keyrt" << endl;

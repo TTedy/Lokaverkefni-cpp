@@ -22,15 +22,15 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
                 nytt_node->next = this->head;
                 this->head = nytt_node;
             }
+        }       
+        void journeyhandler::skraflug(int nr, int fjoldibokathir, int setheildarfjoldi, const std::string& setstadsetning){
+            this->skraradad(new flugfert(nr, fjoldibokathir, setheildarfjoldi, setstadsetning));
         }
-        void journeyhandler::skrahjola(int nr, int fjoldibokathir, int heildarfjoldi, int timi){
-            this->skraradad(new hjolaferth(nr, fjoldibokathir, heildarfjoldi, timi));
+        void journeyhandler::skrahjola(int nr, int fjoldibokathir, int setheildarfjoldi, int timi){
+            this->skraradad(new hjolaferth(nr, fjoldibokathir, setheildarfjoldi, timi));
         }
-        void journeyhandler::skraflug(int nr, int fjoldibokathir, int heildarfjoldi, const std::string& setstadsetning){
-            this->skraradad(new flugfert(nr, fjoldibokathir, heildarfjoldi, setstadsetning));
-        }
-        void journeyhandler::skrabath(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur){
-            this->skraradad(new batsferth(nr, fjoldibokathir, heildarfjoldi, yfirbiggdur));
+        void journeyhandler::skrabath(int nr, int fjoldibokathir, int setheildarfjoldi, bool yfirbiggdur){
+            this->skraradad(new batsferth(nr, fjoldibokathir, setheildarfjoldi, yfirbiggdur));
         }
         void journeyhandler::skraradad(Journey* nytt){
                 JourneyNode* nytt_node = new JourneyNode(nytt);

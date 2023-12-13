@@ -16,7 +16,7 @@ class Journey {
         std::string type;
     public:
         Journey(); // Tómir smiður fyrir Journey hlutinn.
-        Journey(int nr, int fjoldibokathir, int heildarfjoldi); // Smiður sem mótar Journey hlut með tilgreindum upplýsingum.
+        Journey(int nr, int fjoldibokathir, int setheildarfjoldi); // Smiður sem mótar Journey hlut með tilgreindum upplýsingum.
         int getID(); // Aðferð til að ná í auðkenni ferðarinnar.
         void setID(int nr); // Aðferð til að setja auðkenni ferðarinnar.
         int getfjoldibokathir();  // Aðferð til að ná í fjölda bókafjalla í ferðinni.

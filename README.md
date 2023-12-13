@@ -51,6 +51,9 @@ hef líka erfileka að lesa úr þessu, en þegar ég spyr chat þá seygir hann
 
 þetta compilar!!
 
+þannig núna byrjaði fjörir og þá lærði ég að mikið af koðanum var ekki nögu vel skrifaður þar sem "this->" var mikið notað á röngum stöðum og það að ég þurfti að laga gettype fallið mitt.
+annar núna virkar allt frá skrá þar sem það keyrir ekki "setfjoldibokathir" í jorney klassanum.
+
 
 
 <a> þarf að seta hér link á myndband </a>
