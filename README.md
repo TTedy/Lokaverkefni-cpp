@@ -73,6 +73,6 @@ annar núna virkar allt frá skrá þar sem það keyrir ekki "setfjoldibokathir
 
 
 <video width="320" height="240" controls>
-  <source src="video.mov" type="video/mp4">
+  <source src="https://youtu.be/S0HHI26EdWg" type="video/mp4">
 </video>
 

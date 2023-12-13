@@ -46,7 +46,7 @@ int main() {
         cout << "Sláðu inn skipun: ";
         getline(cin, inntak);
         stringstream ss(inntak);
-        ss >> skipun; // skill ekki þetta stringstream nogu vél þannig byrjaði bara að nota cin og cin.ignore() í staðinn
+        ss >> skipun; // skill ekki þetta stringstream nogu vél þannig byrjaði bara að nota cin í staðinn
 
         if (skipun == "skra" || skipun == "skrá") {
             cout << "Sláðu inn tegund ferðar: ";
