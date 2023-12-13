@@ -47,3 +47,7 @@ og upplysingar um hérnig á að nota forritið. </p>
 
 
 [Hlekkur á dagbók](./DAGBOK.md)
+
+[Nýrra myndband af virkni koðans](https://youtu.be/FWx9SFCCxho "myndband af virkni koðans.")
+
+[myndband af virkni koðans.](https://youtu.be/S0HHI26EdWg "myndband af virkni koðans.")
