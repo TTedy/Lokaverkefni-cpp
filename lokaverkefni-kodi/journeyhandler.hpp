@@ -13,7 +13,7 @@ class journeyhandler{
         int nr;
     public:
         journeyhandler();
-        void skrajouney(Journey* nytt);
+        void skrajourney(Journey* nytt);
         void skrahjola(int nr, int fjoldibokathir, int heildarfjoldi, int timi);
         void skraflug(int nr, int fjoldibokathir, int heildarfjoldi, const std::string& setstadsetning);
         void skrabath(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur);
@@ -22,7 +22,11 @@ class journeyhandler{
         void breytahjola(int gamla, int nyja);
         void breytabath(int gamla, int nyja);
         void skraradadSorted(Journey* nytt);
+        void skodaval(int nr);
         void printallt();
+        void printflug();
+        void printhjola();
+        void printbath();
         void eyda(int id);
         bool breyta(int nr, int nyja);
         void prenta();

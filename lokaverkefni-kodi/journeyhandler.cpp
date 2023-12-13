@@ -1,7 +1,5 @@
 // journeyhandler.cpp
 
-#pragma once
-
 #include "journeyhandler.hpp"
 #include "journeynode.hpp"
 #include "flugfert.hpp"
@@ -10,10 +8,12 @@
 #include <iostream>
 #include <string>
 
+using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að spurja kennara
+
         journeyhandler::journeyhandler(){
             this->head = nullptr;
         }
-        void journeyhandler::skrajouney(Journey* nytt){
+        void journeyhandler::skrajourney(Journey* nytt){
             JourneyNode* nytt_node = new JourneyNode(nytt);
             if(!this->head) {
                 this->head = nytt_node;
@@ -78,8 +78,54 @@
             while(current) {
                 current->data->prentaallt();
                 current = current->next;
+        }}
+
+        void journeyhandler::printflug(){
+            // use getType() to check if it's a flugfert then print it all out
+            JourneyNode* current = this->head;
+            while(current) {
+                if (current->data->getType() == "flugfert") {
+                    current->data->prentaallt();
+                }
+                current = current->next;
+            }
         }
+        void journeyhandler::printhjola(){
+            // use getType() to check if it's a hjolaferth then print it all out
+            JourneyNode* current = this->head;
+            while(current) {
+                if (current->data->getType() == "hjolaferth") {
+                    current->data->prentaallt();
+                }
+                current = current->next;
+            }
+            
         }
+        void journeyhandler::printbath(){
+            // use getType() to check if it's a batsferth then print it all out
+            JourneyNode* current = this->head;
+            while(current) {
+                if (current->data->getType() == "batsferth") {
+                    current->data->prentaallt();
+                }
+                current = current->next;
+            }
+        }
+
+        void journeyhandler::skodaval(int nr) {
+            JourneyNode* current = this->head;
+            while (current) {
+                if (current->data->getID() == nr) {
+                    current->data->prentaallt();
+                    return;
+                }
+                current = current->next;
+            }
+            
+            cout << "Þessi ferð er ekki til" << endl;
+        }
+
+
         void journeyhandler::eyda(int nr){
             if(this->head) {
                 if(this->head->data->getID() == nr) {

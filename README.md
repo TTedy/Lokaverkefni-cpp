@@ -39,3 +39,12 @@ Siðustu dagana er ég buin að vera læra fyrir prófið en synilega var ég a�
 en eftir að hafa hreynsað hugan eftir vonsviknina með prófið og personulegt stuff held ég bara afram með koðan eins og með þvi að skapa journeyhandler sem er svipaður og dyragarður með þvi að hafa vinnslu journeynode.
 og að höndla notkun valmyndinar.
 
+uppfærsla á koða. 13.12.2023
+þar sem þetta var siðasti timin spónninar var þetta voðalega mikilvægur timi það komu fram miklar villur í main.cpp skránni minni þar sem ég var að striðast með hvernig ég gerði nöfnin fyrir klassana og föll. en náði að laga það.
+annars get ég ekki séð hvað annað vantar upp á verkefnið.
+
+
+
+
+<a> þarf að seta hér link á myndband </a>
+
