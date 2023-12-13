@@ -49,7 +49,7 @@ int Journey::getheildarfjoldi(){
 void Journey::setheildarfjoldi(int heildarfjoldi){
     this->heildarfjoldi = heildarfjoldi;
 }
-void Journey::prentaallt(){
+void Journey::prentaallt(){ // smá breyting á koðanum vil taka þetta út úr journey.cpp og setja þetta í journeyhandler.cpp
     std::cout << "id: " << this->nr << ", fjoldibokathir: " << this->fjoldibokathir << std::endl;
 }
 std::string Journey::getType(){

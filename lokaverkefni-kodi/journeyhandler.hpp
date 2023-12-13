@@ -10,21 +10,21 @@
 class journeyhandler{
     private:
         JourneyNode* head;
+        int nr;
     public:
         journeyhandler();
         void skrajouney(Journey* nytt);
-        void skrahjola(Journey* nytt);
-        void skraflug(Journey* nytt);
-        void skrabath(Journey* nytt);
+        void skrahjola(int nr, int fjoldibokathir, int heildarfjoldi, int timi);
+        void skraflug(int nr, int fjoldibokathir, int heildarfjoldi, const std::string& setstadsetning);
+        void skrabath(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur);
         void skraradad(Journey* nytt);
-        void beata(int gamla, int nyja);
-        void beataflug(int gamla, int nyja);
-        void beatahjola(int gamla, int nyja);
-        void beatabath(int gamla, int nyja);
+        void breytaflug(int gamla, int nyja);
+        void breytahjola(int gamla, int nyja);
+        void breytabath(int gamla, int nyja);
         void skraradadSorted(Journey* nytt);
         void printallt();
         void eyda(int id);
-        bool breyta(int gamla, int nyja);
+        bool breyta(int nr, int nyja);
         void prenta();
         ~journeyhandler();
 };

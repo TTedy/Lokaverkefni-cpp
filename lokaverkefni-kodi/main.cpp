@@ -92,7 +92,12 @@ int main() {
             getline(cin, nr);
             ss << nr;
             ss >> nr;
-            journeyhandler.breyta();
+            cout << "Sláðu inn nýja fjölda bókaðra sæta: ";
+            getline(cin, nyja);
+            ss << nyja;
+            ss >> nyja;
+
+            journeyhandler.breyta(int nr, int nyja);
         }else if (skipun == "prenta" || skipun == "print"){
             
            do{ 

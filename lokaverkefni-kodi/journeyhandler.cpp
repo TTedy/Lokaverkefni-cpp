@@ -22,14 +22,14 @@
                 this->head = nytt_node;
             }
         }
-        void journeyhandler::skrahjola(Journey* nytt){
+        void journeyhandler::skrahjola(int nr, int fjoldibokathir, int heildarfjoldi, int timi){
             this->skraradad(new hjolaferth(nr, fjoldibokathir, heildarfjoldi, timi));
         }
-        void journeyhandler::skraflug(Journey* nytt){
-            this->skraradad(new flugfert(nr, fjoldibokathir, heildarfjoldi, timi));
+        void journeyhandler::skraflug(int nr, int fjoldibokathir, int heildarfjoldi, const std::string& setstadsetning){
+            this->skraradad(new flugfert(nr, fjoldibokathir, heildarfjoldi, setstadsetning));
         }
-        void journeyhandler::skrabath(Journey* nytt){
-            this->skraradad(new batsferth(nr, fjoldibokathir, heildarfjoldi, timi));
+        void journeyhandler::skrabath(int nr, int fjoldibokathir, int heildarfjoldi, bool yfirbiggdur){
+            this->skraradad(new batsferth(nr, fjoldibokathir, heildarfjoldi, yfirbiggdur));
         }
         void journeyhandler::skraradad(Journey* nytt){
                 JourneyNode* nytt_node = new JourneyNode(nytt);
@@ -51,21 +51,6 @@
                     }
                 }
         }
-
-        void journeyhandler::beata(){
-            // þarf ég að spyrja nontendan um hvaða týpu af ferð þeir vilja bæta við?
-            // eða bara gera Journey? 
-        }
-        void journeyhandler::beataflug(int gamla, int nyja){
-
-        }
-        void journeyhandler::beatahjola(int gamla, int nyja){
-
-        }
-        void journeyhandler::beatabath(int gamla, int nyja){
-
-        }
-
 
         void journeyhandler::skraradadSorted(Journey* nytt) {
             JourneyNode* nytt_node = new JourneyNode(nytt);
@@ -93,7 +78,7 @@
             while(current) {
                 current->data->prentaallt();
                 current = current->next;
-    }
+        }
         }
         void journeyhandler::eyda(int nr){
             if(this->head) {
@@ -115,16 +100,32 @@
                 }
             }
         }
-        bool journeyhandler::breyta(int gamla, int nyja){
+        bool journeyhandler::breyta(int nr, int nyja){
             JourneyNode* current = this->head;
             while(current) {
-                if(current->data->getfjoldibokathir()) {
-                    return current->data->setfjoldibokathir(nyja);
+                if(current->data->getID() == nr) {
+                    // check if heildarfjoldi is valid
+                    if (nyja > this->head->data->getheildarfjoldi()) {
+                        return false;
+                    }else{
+                        return current->data->setfjoldibokathir(nyja);
+                    }
                 }
                 current = current->next;
             }
             return false;
         }
+
+        void journeyhandler::breytaflug(int gamla, int nyja){
+            journeyhandler::breyta(gamla, nyja);
+        }
+        void journeyhandler::breytahjola(int gamla, int nyja){
+            journeyhandler::breyta(gamla, nyja);
+        }
+        void journeyhandler::breytabath(int gamla, int nyja){
+            journeyhandler::breyta(gamla, nyja);
+        }
+
         void journeyhandler::prenta(){
             JourneyNode* current = this->head;
             while(current) {
