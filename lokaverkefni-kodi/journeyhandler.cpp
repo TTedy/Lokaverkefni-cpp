@@ -54,7 +54,7 @@
 
         void journeyhandler::beata(){
             // þarf ég að spyrja nontendan um hvaða týpu af ferð þeir vilja bæta við?
-            // eða bara gera Journey?
+            // eða bara gera Journey? // commita 
         }
         void journeyhandler::beataflug(int gamla, int nyja){
 
