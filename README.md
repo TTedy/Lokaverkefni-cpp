@@ -71,5 +71,5 @@ hef líka erfileka að lesa úr þessu, en þegar ég spyr chat þá seygir hann
 annar núna virkar allt frá skrá þar sem það keyrir ekki "setfjoldibokathir" í jorney klassanum. </p>
 
 
-[link text](https://youtu.be/S0HHI26EdWg "myndband af virkni koðans.")
+[myndband af virkni koðans.](https://youtu.be/S0HHI26EdWg "myndband af virkni koðans.")
 
