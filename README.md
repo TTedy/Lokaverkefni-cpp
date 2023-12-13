@@ -72,5 +72,7 @@ annar núna virkar allt frá skrá þar sem það keyrir ekki "setfjoldibokathir
 
 
 
-<a> þarf að seta hér link á myndband </a>
+<video width="320" height="240" controls>
+  <source src="video.mov" type="video/mp4">
+</video>
 

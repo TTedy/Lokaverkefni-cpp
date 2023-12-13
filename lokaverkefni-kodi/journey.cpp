@@ -48,14 +48,16 @@ void Journey::setheildarfjoldi(int heildarfjoldi){
 }
 
 // Aðferð til að setja fjölda bókafjalla í ferðinni með áherslu á gilt gildi.
-bool Journey::setfjoldibokathir(int fjoldibokathir) { // afhverju verður þetta hunsað þegar ég skra i ferðina?
-    if (fjoldibokathir >= 0 && fjoldibokathir <= getheildarfjoldi()) {
+bool Journey::setfjoldibokathir(int fjoldibokathir) { // afhverju verður þetta hunsað þegar ég skra i ferðina
+
+    int heildarfjoldi = getheildarfjoldi();
+
+    if (fjoldibokathir >= 0 && fjoldibokathir <= heildarfjoldi) {
         this->fjoldibokathir = fjoldibokathir;
         cout << "þetta var keyrt" << endl;
         return true;
     } else {
-        // Tryggðu að ekki sé hægt að skrá fleiri farþega í ferðina en pláss er fyrir.
-        cout << "Þú getur ekki skráð fleiri farþega í ferðina en pláss er fyrir" << endl;
+        cout << "Þú getur ekki skráð fleiri farþega í ferðina en pláss er fyrir" << endl; // þetta loksins vikar! nei það gerir það ekki
         return false;
     }
 }

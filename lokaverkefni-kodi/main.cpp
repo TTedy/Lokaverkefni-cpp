@@ -28,7 +28,7 @@ int main() {
 
     // Búa til tilvik af Flugferð
     journeyhandler.skraflug(204, 10, 50, "Akureyri");
-    journeyhandler.skraflug(205, 120, 200, "Tenerife");
+    journeyhandler.skraflug(205, 120, 120, "Tenerife");
     journeyhandler.skraflug(206, 3, 10, "Grímsey");
     journeyhandler.skraflug(207, 50, 250, "Boston");
 

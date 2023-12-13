@@ -22,57 +22,44 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
                 nytt_node->next = this->head;
                 this->head = nytt_node;
             }
-        }       
-        void journeyhandler::skraflug(int nr, int fjoldibokathir, int setheildarfjoldi, const std::string& setstadsetning){
-            this->skraradad(new flugfert(nr, fjoldibokathir, setheildarfjoldi, setstadsetning));
+        } 
+
+        
+              
+        void journeyhandler::skraflug(int nr, int setfjoldibokathir, int setheildarfjoldi, const std::string& setstadsetning){
+            this->skraradad(new flugfert(nr, setfjoldibokathir, setheildarfjoldi, setstadsetning));
         }
-        void journeyhandler::skrahjola(int nr, int fjoldibokathir, int setheildarfjoldi, int timi){
-            this->skraradad(new hjolaferth(nr, fjoldibokathir, setheildarfjoldi, timi));
+        void journeyhandler::skrahjola(int nr, int setfjoldibokathir, int setheildarfjoldi, int timi){
+            this->skraradad(new hjolaferth(nr, setfjoldibokathir, setheildarfjoldi, timi));
         }
-        void journeyhandler::skrabath(int nr, int fjoldibokathir, int setheildarfjoldi, bool yfirbiggdur){
-            this->skraradad(new batsferth(nr, fjoldibokathir, setheildarfjoldi, yfirbiggdur));
+        void journeyhandler::skrabath(int nr, int setfjoldibokathir, int setheildarfjoldi, bool yfirbiggdur){
+            this->skraradad(new batsferth(nr, setfjoldibokathir, setheildarfjoldi, yfirbiggdur));
         }
-        void journeyhandler::skraradad(Journey* nytt){
-                JourneyNode* nytt_node = new JourneyNode(nytt);
-                if(!this->head) {
-                    this->head = nytt_node;
-                } else {
-                    if(*this->head->data > *nytt) {
-                        nytt_node->next = this->head;
-                        this->head = nytt_node;
-                    } else {
-                        JourneyNode* current = this->head;
-                        JourneyNode* prev = this->head;
-                        while(current && *current->data <= *nytt) {
-                            prev = current;
-                            current = current->next;
-                        }
-                        nytt_node->next = current;
-                        prev->next = nytt_node;
-                    }
+        void journeyhandler::skraradad(Journey* nytt) {
+            JourneyNode* nyttNode = new JourneyNode(nytt);
+            
+            if (!this->head || this->head->data->getheildarfjoldi() <= nytt->getheildarfjoldi()) {
+                nyttNode->next = this->head;
+                this->head = nyttNode;
+            } else {
+                JourneyNode* current = this->head;
+                JourneyNode* prev = nullptr;
+
+                while (current && current->data->getheildarfjoldi() > nytt->getheildarfjoldi()) {
+                    prev = current;
+                    current = current->next;
                 }
-        }
 
-        void journeyhandler::skraradadSorted(Journey* nytt) {
-            JourneyNode* nytt_node = new JourneyNode(nytt);
+                if (prev) {
+                    prev->next = nyttNode;
+                } else {
+                    nyttNode->next = this->head;
+                    this->head = nyttNode;
+                }
 
-            JourneyNode* current = this->head;
-            JourneyNode* prev = nullptr;
-
-            while (current && *current->data >= *nytt) {
-                prev = current;
-                current = current->next;
-            }
-            if (prev) { // ef nullptr
-                nytt_node->next = current;
-                prev->next = nytt_node;
-            } else { // ef ekki nullptr
-                nytt_node->next = this->head;
-                this->head = nytt_node;
+                nyttNode->next = current;
             }
         }
-
-
 
         void journeyhandler::printallt(){
             JourneyNode* current = this->head;
@@ -82,7 +69,6 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
         }}
 
         void journeyhandler::printflug(){
-            // use getType() to check if it's a flugfert then print it all out
             JourneyNode* current = this->head;
             while(current) {
                 if (current->data->getType() == "flugfert") {
@@ -92,7 +78,6 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
             }
         }
         void journeyhandler::printhjola(){
-            // use getType() to check if it's a hjolaferth then print it all out
             JourneyNode* current = this->head;
             while(current) {
                 if (current->data->getType() == "hjolaferth") {
@@ -103,7 +88,6 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
             
         }
         void journeyhandler::printbath(){
-            // use getType() to check if it's a batsferth then print it all out
             JourneyNode* current = this->head;
             while(current) {
                 if (current->data->getType() == "batsferth") {
@@ -139,7 +123,7 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
                         prev = current;
                         current = current->next;
                     }
-                    if(current) { // það fannst dýr með þetta id
+                    if(current) { // það fannst dýr með þetta id (nei það fannst nr)
                         prev->next = current->next;
                         delete current;
                     }
@@ -150,26 +134,15 @@ using namespace std; // er ekki viss ef ég má hafa þetta hérna. þarf að sp
             JourneyNode* current = this->head;
             while(current) {
                 if(current->data->getID() == nr) {
-                    // check if heildarfjoldi is valid
                     if (nyja > this->head->data->getheildarfjoldi()) {
                         return false;
                     }else{
-                        return current->data->setfjoldibokathir(nyja);
+                        return current->data->setfjoldibokathir(nyja); // afhverju virkar set heildarfjolda hér en ekki í skra wtf
                     }
                 }
                 current = current->next;
             }
             return false;
-        }
-
-        void journeyhandler::breytaflug(int gamla, int nyja){
-            journeyhandler::breyta(gamla, nyja);
-        }
-        void journeyhandler::breytahjola(int gamla, int nyja){
-            journeyhandler::breyta(gamla, nyja);
-        }
-        void journeyhandler::breytabath(int gamla, int nyja){
-            journeyhandler::breyta(gamla, nyja);
         }
 
         void journeyhandler::prenta(){

@@ -21,7 +21,6 @@ class journeyhandler : public Journey{
         void breytaflug(int gamla, int nyja);
         void breytahjola(int gamla, int nyja);
         void breytabath(int gamla, int nyja);
-        void skraradadSorted(Journey* nytt);
         void skodaval(int nr);
         void printallt();
         void printflug();
