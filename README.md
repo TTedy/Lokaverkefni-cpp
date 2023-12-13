@@ -67,7 +67,7 @@ hef líka erfileka að lesa úr þessu, en þegar ég spyr chat þá seygir hann
 
 <p>þetta compilar!! </p>
 
-<p> þannig núna byrjaði fjörir og þá lærði ég að mikið af koðanum var ekki nögu vel skrifaður þar sem "this->" var mikið notað á röngum stöðum og það að ég þurfti að laga gettype fallið mitt.
+<p> þannig núna byrjaði fjörið og þá lærði ég að mikið af koðanum var ekki nögu vel skrifaður þar sem "this->" var mikið notað á röngum stöðum og það að ég þurfti að laga gettype fallið mitt.
 annar núna virkar allt frá skrá þar sem það keyrir ekki "setfjoldibokathir" í jorney klassanum. </p>
 
 
