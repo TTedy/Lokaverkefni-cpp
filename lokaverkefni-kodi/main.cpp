@@ -54,7 +54,6 @@ int main() {
     cout << "Hætt með skipunni hætta" << endl;
     cout << "\n" << endl;
     do {
-        cout << "\n" << endl;
         cout << "Sláðu inn skipun: ";
         getline(cin, inntak);
         stringstream ss(inntak);
@@ -66,8 +65,8 @@ int main() {
             cout << "ef þú villt hætta í skra þá þarft þú bara að skifa hætta" << endl;
 
             do{
-                cout << "Sláðu inn tegund ferðar, ";
-                cout << "eða skypun til þess að hætta: ";
+                cout << "Sláðu inn tegund ferðar: ";
+                cout << "eða skypun til þess að hættar: ";
                 getline(cin, inntak);
                 stringstream ss(inntak);
                 ss >> tegund;

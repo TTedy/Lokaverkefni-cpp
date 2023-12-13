@@ -70,6 +70,11 @@ annar núna virkar allt frá skrá þar sem það keyrir ekki "setfjoldibokathir
 
 <p> það var uppfært valmynd þar sem notendin þarf ekki að enda notkun sinni og byrja aftur þegar hann vil skipta um valkost </p>
 
+<p> mikið var gert í þessum tima næstum þvi mikið að ég get ekki lyst öllu en það var lagað röðun linkedlista þar sem hann var að dæma fjoldafarðega en ekki heildar, það var breyt valmynd úr cin í ss eins og kennari vildi. reynt var að gera prentun þannig að það seygir status en það gekk ekki. skitnar villur koma þegar ég geri destuctor (einga hugmynd afhverju) þannig ég er bara orðin hræddur við að nota það. þar sem dæmi þegar ég geri destuctor fyrir journeynode þá kemur villa í journeyhandler skrahjola. annars var mikið endurgerðun koðans þvi þegar það var að reyna compile-a þá komu margar villur fram sem ég er núna buin að laga. gerði tvö myndbond synandi virkni koðans. ég er uppgefin með þessu verkefni :D. 
+
+en annars takk fyrir spönnina. ég er buin að læra mikið frá þessum áfanga ein og að þetta er miklu erfiðara þegar maður er latur og hugsar að maður getur bara lært þetta í endalok áfangas :D (þarf að seta meira metnað í þetta), og það að svindla með gangagryindum er ekki að fara hjalpa mér í lengritíð. 
+</p>
+
 [Nýrra myndband af virkni koðans](https://youtu.be/FWx9SFCCxho "myndband af virkni koðans.")
 
 [myndband af virkni koðans.](https://youtu.be/S0HHI26EdWg "myndband af virkni koðans.")
